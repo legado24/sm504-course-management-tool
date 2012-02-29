@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="../templates/layout.xhtml">
+    <ui:define name="content">
+        <h:form prependId="false" id="growlForm">
+            <p:growl id="growl" showDetail="false"/>
+        </h:form>
+        <p:panel>
+            <f:facet name="header">
+                <h:outputText value="Create Role"/>
+            </f:facet>
+            <p:outputPanel>
+                <h:form prependId="false" id="dataForm">
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Role Name* :" for="rolename"/>
+                        <p:inputText value="#{roleBean.role.name}" id="rolename" required="true"/>
+
+                        <h:outputLabel value="Description :" for="description"/>
+                        <p:inputText value="#{roleBean.role.description}" id="description" required="false"/>
+
+
+                        <h:outputLabel value="Permissions :" for="permissions"/>
+                        <p:selectManyMenu value="#{roleBean.selectedPermissions}" id="permissions"
+                                          converter="tr.edu.metu.ii.sm504.jsf.converter.PermissionConverter">
+                            <f:selectItems value="#{permissionBean.allPermissions}" var="var" itemLabel="#{var.name}" itemValue="#{var}"/>
+                        </p:selectManyMenu>
+
+                        <p:commandButton id="cancelBtn" value="#{messages.label_cancel}" action="roleList" immediate="true" ajax="false" async="false"/>
+                        <p:commandButton id="saveBtn" value="#{messages.label_save}" action="#{roleBean.persist}" update=":growlForm:growl" ajax="false" async="false"/>
+                    </h:panelGrid>
+                </h:form>
+            </p:outputPanel>
+        </p:panel>
+    </ui:define>
+</ui:composition>
+</html>
