@@ -1,0 +1,101 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-25 15:39:14
+project --topLevelPackage tr.edu.metu.ii.sm504 --projectName sm504 --java 6
+persistence setup --provider HIBERNATE --database MYSQL --userName root --password root --databaseName sm504
+entity jpa --class ~.domain.Entity --abstract --mappedSuperclass --identifierField id --identifierType java.lang.Long
+entity jpa --class ~.domain.AuditableEntity --extends ~.domain.Entity --abstract --mappedSuperclass --inheritanceType TABLE_PER_CLASS 
+entity jpa --class ~.domain.User --extends ~.domain.AuditableEntity --permitReservedWords --table USER --testAutomatically
+entity jpa --class ~.domain.Role --extends ~.domain.AuditableEntity --permitReservedWords --table ROLE --testAutomatically
+entity jpa --class ~.domain.Permission --extends ~.domain.AuditableEntity --permitReservedWords --table PERMISSON --testAutomatically
+entity jpa --class ~.domain.Course --extends ~.domain.AuditableEntity  --table COURSE --testAutomatically
+entity jpa --class ~.domain.Semester --extends ~.domain.AuditableEntity  --table SEMESTER --testAutomatically
+entity jpa --class ~.domain.Student --extends ~.domain.AuditableEntity  --table STUDENT --testAutomatically
+entity jpa --class ~.domain.Instructor --extends ~.domain.AuditableEntity  --table INSTRUCTOR --testAutomatically
+entity jpa --class ~.domain.Assistant --extends ~.domain.AuditableEntity  --table ASSISTANT --testAutomatically
+entity jpa --class ~.domain.LectureNote --extends ~.domain.AuditableEntity  --table LECTURE_NOTE --testAutomatically
+entity jpa --class ~.domain.ProjectTeam --extends ~.domain.AuditableEntity  --table PROJECT_TEAM --testAutomatically
+entity jpa --class ~.domain.Activity --extends ~.domain.AuditableEntity  --table ACTIVITY --testAutomatically
+entity jpa --class ~.domain.SubmissionActivity --extends ~.domain.AuditableEntity  --table SUBMISSION_ACTIVITY --testAutomatically
+entity jpa --class ~.domain.Submission --extends ~.domain.AuditableEntity  --table SUBMISSION --testAutomatically
+entity jpa --class ~.domain.Review --extends ~.domain.AuditableEntity  --table REVIEW --testAutomatically
+entity jpa --class ~.domain.Schedule --extends ~.domain.AuditableEntity  --table SCHEDULE --testAutomatically
+entity jpa --class ~.domain.ScheduleTemplate --extends ~.domain.AuditableEntity  --table SCHEDULE_TEMPLATE --testAutomatically
+field string --fieldName username --class ~.domain.User --notNull 
+field string --fieldName name --class ~.domain.User --notNull 
+field string --fieldName surname --class ~.domain.User --notNull 
+field string --fieldName password --class ~.domain.User --notNull 
+field string --fieldName email --notNull --class ~.domain.User --regexp \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b
+field string --fieldName address --class ~.domain.User
+field date --fieldName dueDate --type java.util.Date --class ~.domain.User --notNull 
+field boolean --fieldName status --class ~.domain.User --notNull 
+field file --class ~.domain.User --contentType JPG --fieldName photo
+field set --fieldName roles --type ~.domain.Role --cardinality MANY_TO_MANY --class ~.domain.User --notNull 
+field date --fieldName updateTime --type java.util.Date --class ~.domain.AuditableEntity --notNull
+field reference --fieldName updatedBy --type ~.domain.User --class ~.domain.AuditableEntity --permitReservedWords --notNull
+field date --fieldName creationTime --type java.util.Date --class ~.domain.AuditableEntity --notNull
+field reference --fieldName createdBy --type ~.domain.User --class ~.domain.AuditableEntity --permitReservedWords --notNull
+field string --fieldName name --class ~.domain.Role --notNull 
+field string --fieldName description --class ~.domain.Role 
+field set --fieldName permissions --type ~.domain.Permission --cardinality MANY_TO_MANY --class ~.domain.Role --notNull 
+field string --fieldName name --class ~.domain.Permission --notNull
+field string --fieldName name --class ~.domain.Course
+field string --fieldName code --class ~.domain.Course
+field set --fieldName lectureNotes --type ~.domain.LectureNote --cardinality ONE_TO_MANY --mappedBy course --class ~.domain.Course 
+field set --fieldName students --type ~.domain.Student  --cardinality ONE_TO_MANY --mappedBy course --class ~.domain.Course
+field number --type java.lang.Integer --fieldName year --class ~.domain.Semester --min 1000 --max 9999 --permitReservedWords
+field string --fieldName name --class ~.domain.Semester
+field string --fieldName name --class ~.domain.LectureNote
+field reference --fieldName course --type ~.domain.Course --class ~.domain.LectureNote
+field file --contentType PDF --fieldName data --class ~.domain.LectureNote --permitReservedWords
+field string --fieldName studentNumber --class ~.domain.Student
+field reference --fieldName user --type ~.domain.User --class ~.domain.Student --permitReservedWords
+field reference --fieldName course --type ~.domain.Course --class ~.domain.Student
+field reference --fieldName projectTeam --type ~.domain.ProjectTeam --class ~.domain.Student
+field reference --fieldName user --type ~.domain.User --class ~.domain.Instructor --permitReservedWords
+field reference --fieldName user --type ~.domain.User --class ~.domain.Assistant --permitReservedWords
+field set --fieldName students --type ~.domain.Student  --cardinality ONE_TO_MANY --mappedBy projectTeam --class ~.domain.ProjectTeam
+field reference --fieldName course --type ~.domain.Course --class ~.domain.ProjectTeam
+field set --fieldName submissions --type ~.domain.Submission  --cardinality ONE_TO_MANY --mappedBy projectTeam --class ~.domain.ProjectTeam
+field set --fieldName reviews --type ~.domain.Review  --cardinality ONE_TO_MANY --mappedBy projectTeam --class ~.domain.ProjectTeam
+field reference --fieldName projectTeam --type ~.domain.ProjectTeam --class ~.domain.Submission --notNull
+field reference --fieldName submissionActivity --type ~.domain.SubmissionActivity --class ~.domain.Submission --notNull
+field reference --fieldName projectTeam --type ~.domain.ProjectTeam --class ~.domain.Review --notNull
+field reference --fieldName submissionActivity --type ~.domain.SubmissionActivity --class ~.domain.Review --notNull
+field reference --fieldName submission --type ~.domain.Submission --class ~.domain.Review --notNull
+field date --fieldName dueDate --type java.util.Date --class ~.domain.Activity --notNull
+field string --fieldName title --class ~.domain.Activity --notNull
+field string --fieldName description --class ~.domain.Activity
+field reference --fieldName activity --type ~.domain.Activity --class ~.domain.SubmissionActivity --notNull
+field string --fieldName name --class ~.domain.ScheduleTemplate
+field set --fieldName activities --type ~.domain.Activity  --cardinality ONE_TO_MANY --class ~.domain.ScheduleTemplate
+field reference --fieldName scheduleTemplate --type ~.domain.ScheduleTemplate --class ~.domain.Schedule --notNull
+field reference --fieldName semester --type ~.domain.Semester --class ~.domain.Schedule --notNull
+web jsf setup --implementation APACHE_MYFACES --theme UI_DARKNESS
+web jsf all --package tr.edu.metu.ii.sm504.jsf
+// script --file C:\Users\ekisa\Desktop\sm504.roo
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:41:22
+// [failed] perform eclipse
+// [failed] perform eclipse
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-27 10:42:43
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:42:51
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:43:06
+// [failed] perform eclipse
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-27 10:43:24
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:43:42
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:48:33
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:52:45
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-27 10:55:11
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-28 12:54:44
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-28 12:55:24
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-28 12:55:37
+logging setup --level DEBUG 
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-28 12:57:02
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-28 13:59:33
+email sender setup --hostServer localhost --encoding UTF-8 --username root --password root --port 25
+email template setup --from noreply@ii.metu.edu.tr --subject "Hi, You have a new mail from SM504 Course Management Tool"
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-28 14:13:50
