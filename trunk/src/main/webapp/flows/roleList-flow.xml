@@ -10,7 +10,7 @@
 
     <subflow-state id="roleEdit" subflow="roleEdit-flow">
         <transition on="cancel" to="roleList"/>
-        <transition on="save" to="roleList"/>
+        <transition on="save" to="finish"/>
     </subflow-state>
 
     <end-state id="finish" />
