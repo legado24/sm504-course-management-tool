@@ -17,7 +17,7 @@
                 <f:facet name="header">
                     <h:outputText value="#{roleBean.name}" />
                 </f:facet>
-                <p:commandButton action="roleEdit" value="New Role" ajax="false" async="false"/>
+                <p:commandButton action="toRoleCreate" value="New Role" ajax="false" async="false"/>
                 <br/>
                 <br/>
                 <h:outputFormat id="noRecordsFound" value="#{messages.label_no_records_found}" rendered="#{!roleBean.dataVisible}">

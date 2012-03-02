@@ -45,6 +45,20 @@ public class ApplicationBean {
         MenuItem item;
 
         submenu = new Submenu();
+        submenu.setId("mainMenu");
+        submenu.setLabel("Control Menu");
+        item = new MenuItem();
+        item.setId("roleListMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_menu_roleList}", String.class));
+        item.setUrl("roleList-flow");
+        item.setIcon("ui-icon ui-icon-document");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+        menuModel.addSubmenu(submenu);
+
+        submenu = new Submenu();
         submenu.setId("activitySubmenu");
         submenu.setLabel("Activity");
         item = new MenuItem();
@@ -244,15 +258,6 @@ public class ApplicationBean {
         item.setId("listRoleMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list}", String.class));
         item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{roleBean.displayList}", String.class, new Class[0]));
-        item.setIcon("ui-icon ui-icon-folder-open");
-        item.setAjax(false);
-        item.setAsync(false);
-        item.setUpdate(":dataForm:data");
-        submenu.getChildren().add(item);
-        item = new MenuItem();
-        item.setId("roleListMenuItem");
-        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
-        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "roleList", String.class, new Class[0]));
         item.setIcon("ui-icon ui-icon-folder-open");
         item.setAjax(false);
         item.setAsync(false);
