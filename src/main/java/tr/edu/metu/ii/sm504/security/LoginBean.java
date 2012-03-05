@@ -25,7 +25,6 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
-    @ManagedProperty("#{authenticationService}")
     private AuthenticationService authenticationService;
 
     public String login() {
@@ -40,11 +39,7 @@ public class LoginBean implements Serializable {
         }
     }
 
-    public void prepareLogin() {
-        this.setUsername(StringUtils.EMPTY);
-        this.setPassword(StringUtils.EMPTY);
-    }
-    
+
     public String logout(){
         authenticationService.logout();
         return "logout";
