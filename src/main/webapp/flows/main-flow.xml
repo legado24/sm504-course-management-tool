@@ -5,8 +5,7 @@
 
 
     <view-state id="main" view="/pages/main.xhtml">
-        <transition to="logout" on="logout" />
     </view-state>
 
-	<end-state id="logout" view="flowRedirect:login-flow"/>
+	<end-state id="finish" view="flowRedirect:login-flow"/>
 </flow>

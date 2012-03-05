@@ -11,9 +11,9 @@
       <h:panelGrid columns="2" cellspacing="0" cellpadding="0">
         <h:panelGrid width="600" cellspacing="0" cellpadding="0">
           <h:panelGrid columns="7">
-            <h:outputLink value="../pages/main.jsf">#{messages.label_home}</h:outputLink>
+            <h:outputLink value="main-flow">#{messages.label_home}</h:outputLink>
               <h:outputText value="| "/>
-              <p:commandLink action="#{loginBean.logout}" style="color: #7db223;">#{messages.label_logout}</p:commandLink>
+              <h:outputLink value="logout-flow">#{messages.label_logout}</h:outputLink>
               <h:outputText value="| #{messages.label_language}:" />
               <h:panelGroup>
               <h:commandLink id="switchToEnglish" action="#{localeBean.setSelectedLocale}">
