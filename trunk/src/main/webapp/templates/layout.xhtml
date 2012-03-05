@@ -16,9 +16,9 @@
       <h:panelGrid columns="2" columnClasses="menu,content">
         <p:panel cellspacing="0" cellpadding="0" styleClass="menu">
           <h:form id="menuForm">
-            <h:link outcome="main">
+            <h:outputLink value="main-flow">
               <h:graphicImage library="images" name="roo_logo.png" styleClass="banner" alt="Spring Roo" />
-            </h:link>
+            </h:outputLink>
             <ui:insert name="menu">
               <ui:include src="menu.xhtml" />
             </ui:insert>

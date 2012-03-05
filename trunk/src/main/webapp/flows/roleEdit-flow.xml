@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow xmlns="http://www.springframework.org/schema/webflow"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
-      parent="main-flow">
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
     <view-state id="roleEdit" view="/pages/roleEdit.xhtml">
         <on-entry>
@@ -15,6 +14,6 @@
     </view-state>
 
 
-    <end-state id="cancel"/>
-    <end-state id="save" commit="true"/>
+    <end-state id="cancel" view="flowRedirect:roleList-flow"/>
+    <end-state id="save" commit="true" view="flowRedirect:roleList-flow"/>
 </flow>

@@ -3,11 +3,11 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-    <view-state id="roleList" view="/pages/roleList.xhtml">
-        <transition to="roleEdit" on="toRoleCreate"/>
-        <transition to="finish"/>
+    <view-state id="logout" view="/logout.xhtml">
+        <on-entry>
+            <evaluate expression="loginBean.logout()"/>
+        </on-entry>
     </view-state>
 
-   <end-state id="roleEdit" view="flowRedirect:roleEdit-flow"/>
-   <end-state id="finish" />
+    <end-state id="login" view="flowRedirect:login-flow"/>
 </flow>
