@@ -1,5 +1,8 @@
 package tr.edu.metu.ii.sm504.security;
 
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -16,6 +19,7 @@ import java.io.Serializable;
  */
 @ManagedBean(name = "loginBean")
 @SessionScoped
+@Service
 public class LoginBean implements Serializable {
     private static final long serialVersionUID = 1L;
     private String username;
@@ -27,16 +31,23 @@ public class LoginBean implements Serializable {
     public String login() {
         boolean success = authenticationService.login(username, password);
         if (success) {
-            return "index.html"; // return to application but being logged now
+            return "success";
+            //return "index.html"; // return to application but being logged now
         } else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Username or password incorrect."));
-            return "login.xhtml";
+            return "failure";
+            //return "login.xhtml";
         }
     }
 
+    public void prepareLogin() {
+        this.setUsername(StringUtils.EMPTY);
+        this.setPassword(StringUtils.EMPTY);
+    }
+    
     public String logout(){
         authenticationService.logout();
-        return "/login.xhtml?faces-redirect=true";
+        return "logout";
     }
     
     public void setAuthenticationService(AuthenticationService authenticationService) {

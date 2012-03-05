@@ -10,5 +10,10 @@
         </bean>
         <bean id="permissionBean" class="tr.edu.metu.ii.sm504.jsf.PermissionBean" lazy-init="true"/>
 
+        <bean id="loginBean" class="tr.edu.metu.ii.sm504.security.LoginBean">
+            <property name="authenticationService" ref="authenticationService"/>
+        </bean>
+
+        <bean id="authenticationService" class="tr.edu.metu.ii.sm504.security.AuthenticationServiceImpl"/>
     </beans>
 </beans>

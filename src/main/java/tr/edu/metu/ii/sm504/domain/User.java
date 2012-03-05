@@ -68,17 +68,17 @@ public class User extends AuditableEntity implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return (new Date().after(dueDate));
+        return (new Date().before(dueDate));
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return isEnabled();
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return isAccountNonExpired();
+        return true;
     }
 
     @Override

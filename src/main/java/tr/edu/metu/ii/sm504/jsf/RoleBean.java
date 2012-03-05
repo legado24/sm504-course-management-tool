@@ -23,6 +23,11 @@ public class RoleBean {
         permissionBean.findAllPermissions();
     }
 
+    public void prepareEdit() {
+        this.reset();
+        this.setRole(new Role());
+    }
+
     public String persist() {
         String message = "";
         if (role.getId() != null) {
