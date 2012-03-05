@@ -39,7 +39,7 @@ privileged aspect RoleBean_Roo_ManagedBean {
     declare @type: RoleBean: @ManagedBean(name = "roleBean");
     
     declare @type: RoleBean: @SessionScoped;
-    
+
     private String RoleBean.name = "Roles";
     
 

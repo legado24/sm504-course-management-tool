@@ -36,6 +36,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 return true;
             }
         } catch (AuthenticationException e) {
+            e.printStackTrace();
         }
         return false;
     }
