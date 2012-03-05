@@ -42,11 +42,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public void bypassAuthentication() {
-        this.login("admin", "myRootAdmin");
-    }
-
-    @Override
     public void logout() {
         SecurityContextHolder.clearContext();
     }
