@@ -3,6 +3,7 @@ package tr.edu.metu.ii.sm504.jsf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.roo.addon.jsf.managedbean.RooJsfManagedBean;
 import org.springframework.roo.addon.serializable.RooSerializable;
+import org.springframework.stereotype.Service;
 import tr.edu.metu.ii.sm504.domain.Permission;
 import tr.edu.metu.ii.sm504.domain.Role;
 
@@ -13,14 +14,12 @@ import java.util.List;
 
 @RooSerializable
 @RooJsfManagedBean(entity = Role.class, beanName = "roleBean")
+@Service
 public class RoleBean {
 
-    private PermissionBean permissionBean;
     private Role role;
 
-    public RoleBean(PermissionBean permissionBean) {
-        this.permissionBean = permissionBean;
-        permissionBean.findAllPermissions();
+    public RoleBean() {
     }
 
     public void prepareEdit() {
