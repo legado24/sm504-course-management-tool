@@ -11,13 +11,14 @@
         </on-entry>
         <transition to="roleCreate" on="toRoleCreate"/>
         <transition on="select" to="roleEdit">
-            <set name="flowScope.role" value="flowScope.allRoles.selected" />
+            <set name="flashScope.id" value="flowScope.allRoles.selected.id"/>
         </transition>
         <transition to="finish"/>
     </view-state>
 
     <end-state id="roleCreate" view="flowRedirect:roleEdit-flow"/>
-    <end-state id="roleEdit" view="externalRedirect:contextRelative:/roleEdit-flow?id=#{role.id}">
+    <end-state id="roleEdit" view="flowRedirect:roleEdit-flow?id=#{flashScope.id}">
+
     </end-state>
    <end-state id="finish" />
 </flow>
