@@ -22,9 +22,13 @@ public class RoleBean {
     public RoleBean() {
     }
 
-    public void prepareEdit() {
+    public void prepareEdit(Long id) {
         this.reset();
-        this.setRole(new Role());
+        if (id != null) {
+            role = Role.findRole(id);
+        }else{
+            this.setRole(new Role());
+        }
     }
 
     public String persist() {
@@ -40,6 +44,7 @@ public class RoleBean {
         FacesMessage facesMessage = new FacesMessage(message);
         FacesContext.getCurrentInstance().addMessage(null, facesMessage);
         reset();
-        return findAllRoles();
+        //return findAllRoles();
+        return null;
     }
 }

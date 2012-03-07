@@ -3,14 +3,21 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
+    <var name="searchCriteria" class="tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria" />
+
     <view-state id="roleList" view="/pages/roleList.xhtml">
         <on-entry>
-            <evaluate expression="roleBean.findAllRoles()"/>
+            <set name="flowScope.allRoles" value="searchCriteria.getDataModel(roleBean.role)" />
         </on-entry>
-        <transition to="roleEdit" on="toRoleCreate"/>
+        <transition to="roleCreate" on="toRoleCreate"/>
+        <transition on="select" to="roleEdit">
+            <set name="flowScope.role" value="flowScope.allRoles.selected" />
+        </transition>
         <transition to="finish"/>
     </view-state>
 
-   <end-state id="roleEdit" view="flowRedirect:roleEdit-flow"/>
+    <end-state id="roleCreate" view="flowRedirect:roleEdit-flow"/>
+    <end-state id="roleEdit" view="externalRedirect:contextRelative:/roleEdit-flow?id=#{role.id}">
+    </end-state>
    <end-state id="finish" />
 </flow>

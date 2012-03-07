@@ -3,14 +3,31 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-    <view-state id="roleEdit" view="/pages/roleEdit.xhtml">
+    <input name="id" required="false"/>
+
+    <decision-state id="editOrCreate">
+        <if test="id eq null" then="roleCreate" else="roleEdit"/>
+    </decision-state>
+
+    <view-state id="roleCreate" view="/pages/roleEdit.xhtml">
         <on-entry>
-            <evaluate expression="roleBean.prepareEdit()"/>
+            <evaluate expression="roleBean.prepareEdit(id)"/>
             <evaluate expression="permissionBean.findAllPermissions()"/>
         </on-entry>
         <transition on="endToCancel" to="cancel" bind="false"/>
         <transition on="persist" to="save">
-            <evaluate expression="roleBean.role.persist()"/>
+            <evaluate expression="roleBean.persist()"/>
+        </transition>
+    </view-state>
+
+    <view-state id="roleEdit" view="/pages/roleEdit.xhtml">
+        <on-entry>
+            <evaluate expression="roleBean.prepareEdit(id)"/>
+            <evaluate expression="permissionBean.findAllPermissions()"/>
+        </on-entry>
+        <transition on="endToCancel" to="cancel" bind="false"/>
+        <transition on="persist" to="save">
+            <evaluate expression="roleBean.persist()"/>
         </transition>
     </view-state>
 
