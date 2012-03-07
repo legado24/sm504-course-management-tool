@@ -11,6 +11,10 @@
         </layout>
     </appender>
 
+    <logger name="org.primefaces">
+        <level value="debug" />
+    </logger>
+
     <logger name="org.springframework.beans">
         <level value="warn" />
     </logger>

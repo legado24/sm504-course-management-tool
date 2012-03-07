@@ -8,11 +8,12 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord(identifierField = "id", mappedSuperclass = true)
-public abstract class Entity {
+public abstract class Entity  implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
