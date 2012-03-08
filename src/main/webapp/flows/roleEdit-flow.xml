@@ -6,25 +6,25 @@
     <input name="id" required="false"/>
 
     <decision-state id="editOrCreate">
-        <if test="id eq null" then="roleCreate" else="roleEdit"/>
+        <if test="id eq null" then="createState" else="editState"/>
     </decision-state>
 
-    <view-state id="roleCreate" view="/pages/roleEdit.xhtml">
-        <on-entry>
-            <evaluate expression="roleBean.prepareEdit(id)"/>
+    <view-state id="createState" view="/pages/roleEdit.xhtml" redirect="true">
+        <on-render>
+            <evaluate expression="roleBean.setupFormForCreate()"/>
             <evaluate expression="permissionBean.findAllPermissions()"/>
-        </on-entry>
+        </on-render>
         <transition on="endToCancel" to="cancel" bind="false"/>
         <transition on="persist" to="save">
             <evaluate expression="roleBean.persist()"/>
         </transition>
     </view-state>
 
-    <view-state id="roleEdit" view="/pages/roleEdit.xhtml">
-        <on-entry>
-            <evaluate expression="roleBean.prepareEdit(id)"/>
+    <view-state id="editState" view="/pages/roleEdit.xhtml" redirect="true">
+        <on-render>
+            <evaluate expression="roleBean.setupFormForEdit(id)"/>
             <evaluate expression="permissionBean.findAllPermissions()"/>
-        </on-entry>
+        </on-render>
         <transition on="endToCancel" to="cancel" bind="false"/>
         <transition on="persist" to="save">
             <evaluate expression="roleBean.persist()"/>

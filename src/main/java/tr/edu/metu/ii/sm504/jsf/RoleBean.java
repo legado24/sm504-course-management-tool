@@ -22,13 +22,14 @@ public class RoleBean {
     public RoleBean() {
     }
 
-    public void prepareEdit(Long id) {
+    public void setupFormForCreate() {
         this.reset();
-        if (id != null) {
-            role = Role.findRole(id);
-        }else{
-            this.setRole(new Role());
-        }
+        this.setRole(new Role());
+    }
+
+    public void setupFormForEdit(Long id) {
+        this.reset();
+        role = Role.findRole(id);
     }
 
     public String persist() {

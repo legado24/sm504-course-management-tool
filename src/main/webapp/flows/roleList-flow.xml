@@ -17,8 +17,6 @@
     </view-state>
 
     <end-state id="roleCreate" view="flowRedirect:roleEdit-flow"/>
-    <end-state id="roleEdit" view="flowRedirect:roleEdit-flow?id=#{flashScope.id}">
-
-    </end-state>
+    <end-state id="roleEdit" view="flowRedirect:roleEdit-flow?id=#{flashScope.id}"/>
    <end-state id="finish" />
 </flow>

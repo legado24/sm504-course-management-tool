@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2e0b6b58-b77e-455e-a5df-925d75201400" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowUrlHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" />
+      <change type="MOVED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\flowUrlHandler\EntityIdFlowHandlerAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowHandlerAdapter.java" />
+      <change type="MOVED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\flowUrlHandler\EntityIdFlowUrlHandler.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java" />
     </list>
     <ignored path="sm504.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,72 +45,7 @@
       </breakpoint>
     </exception_breakpoints>
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" line="26" class="tr.edu.metu.ii.sm504.jsf.RoleBean" package="tr.edu.metu.ii.sm504.jsf">
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" line="40" class="tr.edu.metu.ii.sm504.domain.AuditableEntity" package="tr.edu.metu.ii.sm504.domain">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/DefaultFlowUrlHandler.java" line="171" class="org.springframework.webflow.context.servlet.DefaultFlowUrlHandler" package="org.springframework.webflow.context.servlet">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerAdapter.java" line="275" class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter" package="org.springframework.webflow.mvc.servlet">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java" line="23" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityIdFlowHandlerAdapter" package="tr.edu.metu.ii.sm504.jsf.flowUrlHandler">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowUrlHandler.java" line="15" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityIdFlowUrlHandler" package="tr.edu.metu.ii.sm504.jsf.flowUrlHandler">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -193,34 +119,16 @@
       <file leaf-file-name="roleList-flow.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="83" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
+            <state line="19" column="39" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roleEdit-flow.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml">
+      <file leaf-file-name="RoleBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PermissionBean_Roo_ManagedBean.aj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean_Roo_ManagedBean.aj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="33" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="4" selection-start="4520" selection-end="4520" vertical-scroll-proportion="0.0">
+            <state line="45" column="42" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -229,36 +137,61 @@
       <file leaf-file-name="applicationContext-webmvc.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0">
+            <state line="39" column="11" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityIdFlowUrlHandler.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowUrlHandler.java">
+      <file leaf-file-name="JsfFlowHandlerAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-faces/2.3.0.RELEASE/spring-faces-2.3.0.RELEASE-sources.jar!/org/springframework/faces/webflow/JsfFlowHandlerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="9" selection-start="1051" selection-end="1051" vertical-scroll-proportion="1.0045147">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlowHandlerAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="364" column="0" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.0">
+            <state line="31" column="13" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityIdFlowHandlerAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java">
+      <file leaf-file-name="SimpleControllerHandlerAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$M2_REPO$/org/springframework/spring-webmvc/3.1.0.RELEASE/spring-webmvc-3.1.0.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/SimpleControllerHandlerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.0">
+            <state line="38" column="13" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityFlowUrlHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="9" selection-start="1122" selection-end="1122" vertical-scroll-proportion="-14.64">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityFlowHandlerAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowHandlerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="17" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.63829786">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-webflow.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletExternalContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/ServletExternalContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="290" column="30" selection-start="8371" selection-end="8371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -267,7 +200,7 @@
       <file leaf-file-name="FlowUrlHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/FlowUrlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="18" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0">
+            <state line="57" column="18" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -276,7 +209,16 @@
       <file leaf-file-name="DefaultFlowUrlHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/DefaultFlowUrlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="18" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
+            <state line="156" column="5" selection-start="5423" selection-end="5423" vertical-scroll-proportion="-7.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlowHandlerAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="378" column="27" selection-start="14922" selection-end="14941" vertical-scroll-proportion="-229.92">
               <folding />
             </state>
           </provider>
@@ -315,22 +257,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/FlowArgumen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/FlowArgumentResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/RoleEditFlowUrlHandler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/urlrewrite.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/RoleListFlowUrlHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowUrlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowHandlerAdapter.java" />
       </list>
     </option>
   </component>
@@ -348,6 +290,16 @@
         <option name="keepSourceFolders" value="false" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_INTERNAL" />
@@ -410,6 +362,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -765,7 +718,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1149,15 +1101,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796392" sideWeight="0.2445055" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25966495" sideWeight="0.24587911" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.60027474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4697802" sideWeight="0.99871135" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4697802" sideWeight="0.99871135" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46016484" sideWeight="0.58891755" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1169,15 +1121,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23969072" sideWeight="0.2445055" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26030928" sideWeight="0.6703297" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5302198" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25902063" sideWeight="0.6703297" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5082418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Roo Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.49226806" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1214,7 +1166,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="roleList icin dataTable eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="bookmarkable url destegi ekledim" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1233,6 +1185,8 @@
     <MESSAGE value="login mekanizması web flow ile calisacak sekilde değiştirildi" />
     <MESSAGE value="logout webflow ile calisacak sekilde degistirildi" />
     <MESSAGE value="roleList icin dataTable eklendi" />
+    <MESSAGE value="roleList icin dataTable eklendi, roleEdit'e url id parametresi eklendi" />
+    <MESSAGE value="bookmarkable url destegi ekledim" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1242,32 +1196,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/org/springframework/spring-webmvc/3.1.0.RELEASE/spring-webmvc-3.1.0.RELEASE-sources.jar!/org/springframework/web/servlet/view/AbstractView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="22" selection-start="2083" selection-end="2083" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/org/springframework/spring-webmvc/3.1.0.RELEASE/spring-webmvc-3.1.0.RELEASE-sources.jar!/org/springframework/web/servlet/view/AbstractUrlBasedView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="54" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.3437014" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-faces/2.3.0.RELEASE/spring-faces-2.3.0.RELEASE-sources.jar!/org/springframework/faces/mvc/JsfView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="36" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.2820513" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="83" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
+        <state line="19" column="39" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1275,45 +1206,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
+        <state line="45" column="42" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/ServletExternalContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="30" selection-start="8371" selection-end="8371" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.webflow.fileEditor.WebflowDesignerFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean_Roo_ManagedBean.aj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="33" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="4" selection-start="4520" selection-end="4520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="0" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/FlowUrlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="18" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0">
+        <state line="57" column="18" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1332,36 +1239,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/context/servlet/DefaultFlowUrlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="18" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
+        <state line="156" column="5" selection-start="5423" selection-end="5423" vertical-scroll-proportion="-7.16">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityIdFlowUrlHandler.java">
+    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="9" selection-start="1051" selection-end="1051" vertical-scroll-proportion="1.0045147">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="378" column="27" selection-start="14922" selection-end="14941" vertical-scroll-proportion="-229.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$M2_REPO$/org/springframework/spring-webmvc/3.1.0.RELEASE/spring-webmvc-3.1.0.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/SimpleControllerHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="13" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$M2_REPO$/org/springframework/spring-webmvc/3.1.0.RELEASE/spring-webmvc-3.1.0.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="22" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-webflow/2.3.0.RELEASE/spring-webflow-2.3.0.RELEASE-sources.jar!/org/springframework/webflow/mvc/servlet/FlowHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="53" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.3437014">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$M2_REPO$/org/springframework/webflow/spring-faces/2.3.0.RELEASE/spring-faces-2.3.0.RELEASE-sources.jar!/org/springframework/faces/webflow/JsfFlowHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="11" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="1122" selection-end="1122" vertical-scroll-proportion="-14.64">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="17" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.63829786">
+          <folding />
         </state>
       </provider>
     </entry>

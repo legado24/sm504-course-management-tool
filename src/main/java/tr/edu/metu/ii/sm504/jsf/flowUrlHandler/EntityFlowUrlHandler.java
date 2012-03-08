@@ -15,7 +15,7 @@ import java.util.Map;
  * Time: 00:34
  * To change this template use File | Settings | File Templates.
  */
-public class EntityIdFlowUrlHandler extends DefaultFlowUrlHandler {
+public class EntityFlowUrlHandler extends DefaultFlowUrlHandler {
 
     public String createFlowExecutionUrl(String flowId, String flowExecutionKey, HttpServletRequest request){
         final StringBuffer url = new StringBuffer(super.createFlowExecutionUrl(flowId, flowExecutionKey, request));

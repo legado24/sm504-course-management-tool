@@ -30,9 +30,13 @@
     <!--<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />-->
 
     <!-- Dispatches requests mapped to flows to FlowHandler implementations -->
-    <bean class="org.springframework.faces.webflow.JsfFlowHandlerAdapter">
+    <!--<bean class="org.springframework.faces.webflow.JsfFlowHandlerAdapter">
         <property name="flowExecutor" ref="flowExecutor" />
-        <property name="flowUrlHandler" ref="entityIdFlowUrlHandler"/>
+        <property name="flowUrlHandler" ref="entityFlowUrlHandler"/>
+    </bean>-->
+    <bean class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityFlowHandlerAdapter">
+        <property name="flowExecutor" ref="flowExecutor"/>
+        <property name="flowUrlHandler" ref="entityFlowUrlHandler"/>
     </bean>
 
    <!-- <bean class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityIdFlowHandlerAdapter">
@@ -40,7 +44,8 @@
         <property name="flowUrlHandler" ref="entityIdFlowUrlHandler"/>
     </bean>-->
 
-    <bean id="entityIdFlowUrlHandler" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityIdFlowUrlHandler" />
+    <bean id="entityFlowUrlHandler" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityFlowUrlHandler">
+    </bean>
 
     <!--<bean name="roleList-flow" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.RoleListFlowUrlHandler" />-->
 
