@@ -17,6 +17,15 @@ import java.util.Map;
  */
 public class EntityFlowUrlHandler extends DefaultFlowUrlHandler {
 
+    /**
+     * URL stateful oldugu icin SpringWebFlow get parameterlerini URLde gostermiyor
+     * Ama bu handler sayesinde parametreleri URL'e tekrar yaziyorum
+     *
+     * @param flowId
+     * @param flowExecutionKey
+     * @param request
+     * @return
+     */
     public String createFlowExecutionUrl(String flowId, String flowExecutionKey, HttpServletRequest request){
         final StringBuffer url = new StringBuffer(super.createFlowExecutionUrl(flowId, flowExecutionKey, request));
         Map input = new HashMap();

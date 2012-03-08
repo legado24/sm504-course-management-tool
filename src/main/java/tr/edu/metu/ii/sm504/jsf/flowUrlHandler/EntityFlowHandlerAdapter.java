@@ -26,6 +26,15 @@ import java.util.Map;
  */
 public class EntityFlowHandlerAdapter extends JsfFlowHandlerAdapter {
 
+    /**
+     * URL bookmark ile ulasilirsa request parametreleri kaybetmeden yeni bir execution token olusturuyor
+     *
+     * @param flowId
+     * @param e
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     protected void defaultHandleException(String flowId, FlowException e, HttpServletRequest request,
                                           HttpServletResponse response) throws IOException {
         if (e instanceof NoSuchFlowExecutionException && flowId != null) {
