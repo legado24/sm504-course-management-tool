@@ -9,7 +9,7 @@
         <if test="id eq null" then="createState" else="editState"/>
     </decision-state>
 
-    <view-state id="createState" view="/pages/roleEdit.xhtml" redirect="true">
+    <view-state id="createState" view="/pages/roleEdit.xhtml">
         <on-render>
             <evaluate expression="roleBean.setupFormForCreate()"/>
             <evaluate expression="permissionBean.findAllPermissions()"/>
@@ -20,7 +20,7 @@
         </transition>
     </view-state>
 
-    <view-state id="editState" view="/pages/roleEdit.xhtml" redirect="true">
+    <view-state id="editState" view="/pages/roleEdit.xhtml">
         <on-render>
             <evaluate expression="roleBean.setupFormForEdit(id)"/>
             <evaluate expression="permissionBean.findAllPermissions()"/>

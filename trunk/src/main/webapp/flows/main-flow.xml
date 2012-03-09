@@ -4,7 +4,7 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 
-    <view-state id="main" view="/pages/main.xhtml">
+    <view-state id="main" view="/pages/main.xhtml" redirect="false">
     </view-state>
 
 	<end-state id="finish" view="flowRedirect:login-flow"/>
