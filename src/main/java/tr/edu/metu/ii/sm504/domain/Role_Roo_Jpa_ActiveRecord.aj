@@ -33,5 +33,4 @@ privileged aspect Role_Roo_Jpa_ActiveRecord {
         this.entityManager.flush();
         return merged;
     }
-    
 }

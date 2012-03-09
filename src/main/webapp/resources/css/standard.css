@@ -98,3 +98,7 @@ a:visited {
     outline: medium none;
     padding: 4px;
 }
+
+.ui-datalist-item{
+    width: 200px;
+}

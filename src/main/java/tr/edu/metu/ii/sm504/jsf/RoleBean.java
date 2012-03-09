@@ -1,5 +1,6 @@
 package tr.edu.metu.ii.sm504.jsf;
 
+import org.primefaces.event.SelectEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.roo.addon.jsf.managedbean.RooJsfManagedBean;
 import org.springframework.roo.addon.serializable.RooSerializable;
@@ -9,6 +10,7 @@ import tr.edu.metu.ii.sm504.domain.Role;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +34,11 @@ public class RoleBean {
         role = Role.findRole(id);
     }
 
+    public void setupFormForView(Long id) {
+        this.reset();
+        role = Role.findRole(id);
+    }
+
     public String persist() {
         String message = "";
         if (role.getId() != null) {
@@ -47,5 +54,10 @@ public class RoleBean {
         reset();
         //return findAllRoles();
         return null;
+    }
+
+    public void remove(Long id) {
+        this.role = Role.findRole(id);
+        this.delete();
     }
 }

@@ -38,22 +38,30 @@
                         <f:facet name="header">
                             <h:outputText value="Actions" />
                         </f:facet>
-                        <p:commandButton id="viewButton" icon="ui-icon-zoomin" oncomplete="viewDialog.show()" title="#{messages.label_view}">
-                            <f:setPropertyActionListener value="#{role}" target="#{roleBean.role}" />
+                        <p:commandButton id="viewButton" icon="ui-icon-zoomin" action="view" title="#{messages.label_view}">
+                            <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}" />
                         </p:commandButton>
                         <p:tooltip for="viewButton" value="#{messages.label_view}" showEffect="fade" hideEffect="fade" />
-                        <p:commandButton id="editButton" icon="ui-icon-pencil" action="select" title="#{messages.label_edit}">
+                        <p:commandButton id="editButton" icon="ui-icon-pencil" action="edit" title="#{messages.label_edit}">
                             <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}" />
                         </p:commandButton>
                         <p:tooltip for="editButton" value="#{messages.label_edit}" showEffect="fade" hideEffect="fade" />
                         <p:commandButton id="deleteButton" icon="ui-icon-trash" oncomplete="deleteDialog.show()" title="#{messages.label_delete}">
-                            <f:setPropertyActionListener value="#{role}" target="#{roleBean.role}" />
+                            <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}" />
                         </p:commandButton>
                         <p:tooltip for="deleteButton" value="#{messages.label_delete}" showEffect="fade" hideEffect="fade" />
                     </p:column>
                 </p:dataTable>
             </p:panel>
         </h:form>
+        <p:confirmDialog id="deleteDialog" widgetVar="deleteDialog" message="#{messages.label_delete_record}" showEffect="fade" hideEffect="explode" header="#{messages.label_confirm_deletion}" severity="alarm">
+            <p:outputPanel id="deletePanel">
+                <h:form id="deleteForm">
+                    <p:commandButton id="deleteNoButton" value="#{messages.label_no}" onclick="deleteDialog.hide()" type="button" />
+                    <p:commandButton id="deleteYesButton" value="#{messages.label_yes}" action="delete" update=":dataForm:data :growlForm:growl" oncomplete="deleteDialog.hide()"/>
+                </h:form>
+            </p:outputPanel>
+        </p:confirmDialog>
     </ui:define>
 </ui:composition>
 </html>

@@ -25,12 +25,4 @@ privileged aspect Role_Roo_JavaBean {
         this.description = description;
     }
     
-    public Set<Permission> Role.getPermissions() {
-        return this.permissions;
-    }
-    
-    public void Role.setPermissions(Set<Permission> permissions) {
-        this.permissions = permissions;
-    }
-    
 }

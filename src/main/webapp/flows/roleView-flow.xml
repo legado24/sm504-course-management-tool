@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+    <input name="id" required="true"/>
+
+    <decision-state id="viewOrCancel">
+        <if test="id eq null" then="cancel" else="viewState"/>
+    </decision-state>
+
+    <view-state id="viewState" view="/pages/roleView.xhtml">
+        <on-render>
+            <evaluate expression="roleBean.setupFormForView(id)"/>
+        </on-render>
+        <transition on="endToCancel" to="cancel" bind="false"/>
+    </view-state>
+
+    <end-state id="cancel" view="flowRedirect:roleList-flow"/>
+</flow>
