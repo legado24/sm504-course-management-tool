@@ -1,5 +1,6 @@
 package tr.edu.metu.ii.sm504.domain;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,6 +12,7 @@ import org.primefaces.model.SortOrder;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.transaction.annotation.Transactional;
 import tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria;
 
 @RooJavaBean
@@ -25,7 +27,7 @@ public class Role extends AuditableEntity {
 
     @NotNull
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Permission> permissions = new HashSet<Permission>();
+    private List<Permission> permissions = new ArrayList<Permission>();
 
     public static List<Role> findRoles(SearchRoleCriteria searchCriteria, int first, String orderBy, SortOrder sortOrder) {
         orderBy = (orderBy != null) ? orderBy : "name";
@@ -39,5 +41,13 @@ public class Role extends AuditableEntity {
         Long l = (Long) entityManager().createQuery("select count(r.id) from Role r")
                 .getSingleResult();
         return l.intValue();
+    }
+
+    public List<Permission> getPermissions() {
+        return this.permissions;
+    }
+
+    public void setPermissions(List<Permission> permissions) {
+        this.permissions = permissions;
     }
 }

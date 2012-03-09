@@ -570,7 +570,7 @@ privileged aspect RoleBean_Roo_ManagedBean {
     
     public void RoleBean.setSelectedPermissions(List<Permission> selectedPermissions) {
         if (selectedPermissions != null) {
-            role.setPermissions(new HashSet<Permission>(selectedPermissions));
+            role.setPermissions(selectedPermissions);
         }
         this.selectedPermissions = selectedPermissions;
     }

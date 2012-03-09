@@ -10,13 +10,21 @@
             <set name="flowScope.allRoles" value="searchCriteria.getDataModel(roleBean.role)" />
         </on-entry>
         <transition to="roleCreate" on="toRoleCreate"/>
-        <transition on="select" to="roleEdit">
+        <transition on="view" to="roleView">
             <set name="flashScope.id" value="flowScope.allRoles.selected.id"/>
+        </transition>
+        <transition on="edit" to="roleEdit">
+            <set name="flashScope.id" value="flowScope.allRoles.selected.id"/>
+        </transition>
+        <transition on="delete" to="finish">
+            <set name="flashScope.id" value="flowScope.allRoles.selected.id"/>
+            <evaluate expression="roleBean.remove(id)"/>
         </transition>
         <transition to="finish"/>
     </view-state>
 
     <end-state id="roleCreate" view="flowRedirect:roleEdit-flow"/>
+    <end-state id="roleView" view="flowRedirect:roleView-flow?id=#{flashScope.id}"/>
     <end-state id="roleEdit" view="flowRedirect:roleEdit-flow?id=#{flashScope.id}"/>
    <end-state id="finish" />
 </flow>

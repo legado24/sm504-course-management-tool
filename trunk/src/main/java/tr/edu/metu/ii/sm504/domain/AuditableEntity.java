@@ -2,6 +2,7 @@ package tr.edu.metu.ii.sm504.domain;
 
 import java.util.Date;
 import javax.persistence.ManyToOne;
+import javax.persistence.Query;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -56,7 +57,7 @@ public abstract class AuditableEntity extends Entity {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Entity attached = Entity.findEntity(this.getId());
+            Entity attached = entityManager.find(this.getClass(), this.getId());
             this.entityManager.remove(attached);
         }
     }
