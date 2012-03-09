@@ -5,7 +5,7 @@
 
     <var name="searchCriteria" class="tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria" />
 
-    <view-state id="roleList" view="/pages/roleList.xhtml">
+    <view-state id="roleList" view="/pages/roleList.xhtml" redirect="false">
         <on-entry>
             <set name="flowScope.allRoles" value="searchCriteria.getDataModel(roleBean.role)" />
         </on-entry>
