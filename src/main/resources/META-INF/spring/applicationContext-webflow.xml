@@ -21,6 +21,8 @@
     </webflow:flow-executor>
 
     <!-- The registry of executable flow definitions -->
+    <!-- UNIT TESTLER KOSULURKEN ASAGIDAKI SATIRI KULLAN -->
+    <!--<webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="classpath*:/flows">-->
     <webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/flows">
         <webflow:flow-location-pattern value="/**/*-flow.xml" />
     </webflow:flow-registry>

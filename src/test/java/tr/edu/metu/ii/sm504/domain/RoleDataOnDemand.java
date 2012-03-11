@@ -20,6 +20,7 @@ public class RoleDataOnDemand {
 
     private List<Role> data;
 
+    @Autowired
     private RoleService roleService;
 
     @Autowired

@@ -20,7 +20,7 @@ public class Permission extends AuditableEntity {
     @NotNull
     private String name;
 
-    @ManyToMany(mappedBy = "permissions")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "permissions")
     private List<Role> roles = new ArrayList<Role>();
 
     public String getName() {
