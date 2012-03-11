@@ -2,6 +2,7 @@ package tr.edu.metu.ii.sm504.jsf.search;
 
 import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.jsf.dataModel.RoleLazyDataModel;
+import tr.edu.metu.ii.sm504.service.RoleService;
 
 import javax.faces.model.DataModel;
 import java.io.Serializable;
@@ -13,7 +14,7 @@ import java.io.Serializable;
  * Time: 06:59
  * To change this template use File | Settings | File Templates.
  */
-public class SearchRoleCriteria implements Serializable{
+public class SearchRoleCriteria implements SearchCriteria, Serializable{
     private static final long serialVersionUID = 1L;
 
     /**
@@ -35,8 +36,8 @@ public class SearchRoleCriteria implements Serializable{
      * Returns a {@link javax.faces.model.DataModel} based on the search criteria.
      * @param role rich domain model to use to retrieve roles.
      */
-    public DataModel<Role> getDataModel(Role role) {
-        return new RoleLazyDataModel(this, role);
+    public DataModel<Role> getDataModel(RoleService roleService) {
+        return new RoleLazyDataModel(this, roleService);
     }
 
     public String getSearchString() {

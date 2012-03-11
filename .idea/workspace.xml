@@ -2,18 +2,365 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2e0b6b58-b77e-455e-a5df-925d75201400" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleView-flow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/roleView.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchCriteria.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/AuditableEntityService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/EntityService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/PermissionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/RoleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/util/ApplicationUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-dataSource.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-mail.xml" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Activity_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Assistant_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\AuditableEntity_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\AuditableEntity_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\AuditableEntity_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\AuditableEntity_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\AuditableEntity_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Course_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Entity_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Entity_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Entity_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Entity_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Instructor_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\LectureNote_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Permission_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Permission_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Permission_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Permission_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Permission_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ProjectTeam_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Review_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Role_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Role_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Role_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Role_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Role_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplate_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Schedule_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Semester_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Student_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\SubmissionActivity_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\Submission_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\User_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\User_Roo_JavaBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\User_Roo_Jpa_ActiveRecord.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\User_Roo_Jpa_Entity.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\domain\User_Roo_ToString.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ActivityBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ActivityBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ActivityBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ActivityBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ApplicationBean_Roo_ApplicationBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ApplicationBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\AssistantBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\AssistantBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\AssistantBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\AssistantBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\CourseBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\CourseBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\CourseBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\CourseBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\InstructorBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\InstructorBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\InstructorBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\InstructorBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\LectureNoteBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\LectureNoteBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\LectureNoteBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\LectureNoteBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\PermissionBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\PermissionBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\PermissionBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ProjectTeamBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ProjectTeamBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ProjectTeamBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ProjectTeamBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ReviewBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ReviewBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ReviewBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ReviewBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\RoleBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\RoleBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\RoleBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleTemplateBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleTemplateBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleTemplateBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\ScheduleTemplateBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SemesterBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SemesterBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SemesterBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SemesterBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\StudentBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\StudentBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\StudentBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\StudentBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionActivityBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionActivityBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionActivityBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionActivityBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionBean.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\SubmissionBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\UserBean_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\UserBean_Roo_ManagedBean.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\UserBean_Roo_Serializable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ActivityConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ActivityConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ActivityConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\AssistantConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\AssistantConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\AssistantConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\CourseConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\CourseConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\CourseConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\InstructorConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\InstructorConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\InstructorConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\LectureNoteConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\LectureNoteConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\LectureNoteConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\PermissionConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\PermissionConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ProjectTeamConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ProjectTeamConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ProjectTeamConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ReviewConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ReviewConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ReviewConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\RoleConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\RoleConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleTemplateConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleTemplateConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\ScheduleTemplateConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SemesterConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SemesterConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SemesterConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\StudentConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\StudentConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\StudentConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionActivityConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionActivityConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionActivityConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\SubmissionConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\UserConverter_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\java\tr\edu\metu\ii\sm504\jsf\converter\UserConverter_Roo_Converter.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\activity.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\assistant.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\course.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\instructor.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\lectureNote.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\permission.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\projectTeam.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\review.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\role.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\schedule.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\scheduleTemplate.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\semester.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\student.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\submission.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\main\webapp\pages\submissionActivity.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ActivityIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\AssistantIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\CourseIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\InstructorIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\LectureNoteIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\PermissionDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\PermissionDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\PermissionIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\PermissionIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ProjectTeamIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ReviewIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\RoleDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\RoleDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\RoleIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\RoleIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\ScheduleTemplateIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SemesterIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\StudentIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionActivityIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionDataOnDemand.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionIntegrationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\SubmissionIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\UserDataOnDemand_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\UserDataOnDemand_Roo_DataOnDemand.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\UserIntegrationTest_Roo_Configurable.aj" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\sm504\src\test\java\tr\edu\metu\ii\sm504\domain\UserIntegrationTest_Roo_IntegrationTest.aj" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sm504.iml" afterPath="$PROJECT_DIR$/sm504.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Permission.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Permission.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_JavaBean.aj" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_JavaBean.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_Jpa_ActiveRecord.aj" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_Jpa_ActiveRecord.aj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/ApplicationBean.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/ApplicationBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean_Roo_ManagedBean.aj" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean_Roo_ManagedBean.aj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/UserBean.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/UserBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/PermissionConverter.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/PermissionConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/RoleConverter.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/RoleConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/UserConverter.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/UserConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/security/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/security/UserDetailsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/util/SpringPropertiesUtil.java" afterPath="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/util/SpringPropertiesUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/flows/roleView-flow.xml" afterPath="$PROJECT_DIR$/src/main/webapp/flows/roleView-flow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/standard.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/standard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/PermissionDataOnDemand.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/PermissionDataOnDemand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/PermissionIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/PermissionIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/RoleDataOnDemand.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/RoleDataOnDemand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/RoleIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/RoleIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/UserDataOnDemand.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/UserDataOnDemand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/UserIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/tr/edu/metu/ii/sm504/domain/UserIntegrationTest.java" />
     </list>
     <ignored path="sm504.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +396,7 @@
       </breakpoint>
     </exception_breakpoints>
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" line="41" class="tr.edu.metu.ii.sm504.domain.AuditableEntity" package="tr.edu.metu.ii.sm504.domain">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" line="2" class="AuditableEntity.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -59,23 +406,10 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" line="59" class="tr.edu.metu.ii.sm504.jsf.RoleBean" package="tr.edu.metu.ii.sm504.jsf">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" line="59" class="tr.edu.metu.ii.sm504.domain.AuditableEntity" package="tr.edu.metu.ii.sm504.domain">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" line="19" class="tr.edu.metu.ii.sm504.domain.AuditableEntity" package="tr.edu.metu.ii.sm504.domain">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -136,8 +470,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -146,28 +480,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="roleList.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml">
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="84" selection-start="4157" selection-end="4157" vertical-scroll-proportion="-16.26923">
+            <state line="13" column="90" selection-start="1170" selection-end="1330" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="role.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/role.xhtml">
+      <file leaf-file-name="roleEdit-flow.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml">
+          <provider editor-type-id="com.intellij.spring.webflow.fileEditor.WebflowDesignerFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="17" selection-start="6073" selection-end="6073" vertical-scroll-proportion="-33.26923">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.1">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="primefaces-p.taglib.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$M2_REPO$/org/primefaces/primefaces/3.1.1/primefaces-3.1.1.jar!/META-INF/primefaces-p.taglib.xml">
+      <file leaf-file-name="AuditableEntityService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/AuditableEntityService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="67" selection-start="8271" selection-end="8291" vertical-scroll-proportion="0.0">
+            <state line="18" column="84" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roleEdit.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="52" selection-start="1618" selection-end="1618" vertical-scroll-proportion="-14.730769">
               <folding />
             </state>
           </provider>
@@ -179,19 +525,17 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.8037825">
+            <state line="5" column="26" selection-start="329" selection-end="329" vertical-scroll-proportion="0.13219285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleBean_Roo_ManagedBean.aj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean_Roo_ManagedBean.aj">
+      <file leaf-file-name="SearchRoleCriteria.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#35738#0" expanded="true" />
-              </folding>
+            <state line="39" column="28" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,16 +543,84 @@
       <file leaf-file-name="RoleLazyDataModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="39" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuditableEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml">
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="45" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0">
+            <state line="58" column="0" selection-start="4287" selection-end="4287" vertical-scroll-proportion="-25.55">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-dataSource.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-dataSource.xml">
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="-3.4">
+              <folding>
+                <element signature="e#814#843#0" expanded="true" />
+                <element signature="e#881#898#0" expanded="true" />
+                <element signature="e#941#963#0" expanded="true" />
+                <element signature="e#1006#1028#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-mail.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-mail.xml">
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="11" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-13.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/EntityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="10" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PermissionService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/PermissionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="0" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PermissionConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/PermissionConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PermissionBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="0" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,69 +630,6 @@
         <entry file="jar://$M2_REPO$/org/springframework/spring-expression/3.1.0.RELEASE/spring-expression-3.1.0.RELEASE-sources.jar!/org/springframework/expression/spel/support/ReflectiveMethodExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="72" column="0" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roleView.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleView.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="28" selection-start="1426" selection-end="1444" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standard.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/standard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="17" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Role.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="35" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="c.tld" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$M2_REPO$/javax/servlet/jstl/1.2/jstl-1.2.jar!/META-INF/c.tld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="331" column="13" selection-start="9499" selection-end="9502" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticationServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/security/AuthenticationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="4" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -301,22 +650,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowHandlerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/flowUrlHandler/EntityFlowUrlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webmvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleView-flow.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/templates/content.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_JavaBean.aj" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/roleView.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/standard.css" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role_Roo_Jpa_ActiveRecord.aj" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean_Roo_ManagedBean.aj" />
-        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-webflow.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/AuditableEntityService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/EntityService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/flows/roleList-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-mail.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-dataSource.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml" />
       </list>
     </option>
   </component>
@@ -480,136 +829,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -696,84 +915,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm504" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flowUrlHandler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="163" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="145" />
     <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="145" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="46" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="164" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="164" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -792,31 +947,32 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="165" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="839" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="RESOURCE_BUNDLE_SPLITTER_PROPORTION" value="0.5" />
-    <property name="options.lastSelected" value="preferences.externalResources" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="options.lastSelected" value="preferences.externalResources" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tr.edu.metu.ii.sm504.service" />
       <recent name="tr.edu.metu.ii.sm504.jsf.flowUrlHandler" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\sm504\src\main\resources\META-INF\spring" />
       <recent name="D:\Project\sm504\src\main\webapp\pages" />
       <recent name="D:\Project\sm504\src\main\webapp\flows" />
       <recent name="D:\Project\sm504\src\main\webapp" />
-      <recent name="D:\Project\sm504\src\main\resources\META-INF\spring" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.22">
@@ -949,6 +1105,7 @@
       </method>
     </configuration>
     <configuration default="false" name="JBoss 7.1.0" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 7.1.0.Final">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="COMMON_VM_ARGUMENTS" value="-Duser.language=en -Xmx1024m" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -1146,14 +1303,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25966495" sideWeight="0.24587911" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.60027474" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4697802" sideWeight="0.99871135" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.60027474" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57417583" sideWeight="0.99871135" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46016484" sideWeight="0.58891755" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1166,9 +1323,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23969072" sideWeight="0.2445055" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5302198" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25708762" sideWeight="0.6703297" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.253866" sideWeight="0.6703297" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5082418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Roo Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.49226806" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1210,7 +1367,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="fazlalıklar silindi, LazyException duzeltildi" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1232,6 +1389,7 @@
     <MESSAGE value="roleList icin dataTable eklendi, roleEdit'e url id parametresi eklendi" />
     <MESSAGE value="bookmarkable url destegi ekledim" />
     <MESSAGE value="delete eklendi" />
+    <MESSAGE value="fazlalıklar silindi, LazyException duzeltildi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1241,14 +1399,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/security/ApplicationDelegatingFilterProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="27" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0" />
+        <state line="37" column="0" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/PermissionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" />
+        <state line="46" column="0" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/converter/PermissionConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/PermissionBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$M2_REPO$/org/springframework/spring-expression/3.1.0.RELEASE/spring-expression-3.1.0.RELEASE-sources.jar!/org/springframework/expression/spel/support/ReflectiveMethodExecutor.java">
@@ -1256,86 +1424,89 @@
         <state line="72" column="0" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleView.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/flows/roleEdit-flow.xml">
+      <provider editor-type-id="com.intellij.spring.webflow.fileEditor.WebflowDesignerFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="28" selection-start="1426" selection-end="1444" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.1">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/standard.css">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="17" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
+        <state line="13" column="90" selection-start="1170" selection-end="1330" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Role.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/AuditableEntityService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+        <state line="18" column="84" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/service/EntityService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/javax/servlet/jstl/1.2/jstl-1.2.jar!/META-INF/c.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="331" column="13" selection-start="9499" selection-end="9502" vertical-scroll-proportion="0.0">
+        <state line="18" column="10" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/security/AuthenticationServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleEdit.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="4" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
+        <state line="31" column="52" selection-start="1618" selection-end="1618" vertical-scroll-proportion="-14.730769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$M2_REPO$/org/primefaces/primefaces/3.1.1/primefaces-3.1.1.jar!/META-INF/primefaces-p.taglib.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/search/SearchRoleCriteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="67" selection-start="8271" selection-end="8291" vertical-scroll-proportion="0.0">
+        <state line="39" column="28" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/domain/AuditableEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/dataModel/RoleLazyDataModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="45" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/role.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-mail.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="17" selection-start="6073" selection-end="6073" vertical-scroll-proportion="-33.26923">
+        <state line="16" column="11" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-13.6">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/roleList.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="84" selection-start="4157" selection-end="4157" vertical-scroll-proportion="-16.26923">
+        <state line="58" column="0" selection-start="4287" selection-end="4287" vertical-scroll-proportion="-25.55">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-dataSource.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tr/edu/metu/ii/sm504/jsf/RoleBean_Roo_ManagedBean.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="-3.4">
           <folding>
-            <element signature="e#0#35738#0" expanded="true" />
+            <element signature="e#814#843#0" expanded="true" />
+            <element signature="e#881#898#0" expanded="true" />
+            <element signature="e#941#963#0" expanded="true" />
+            <element signature="e#1006#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1345,7 +1516,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.8037825">
+        <state line="5" column="26" selection-start="329" selection-end="329" vertical-scroll-proportion="0.13219285">
           <folding />
         </state>
       </provider>
@@ -1356,7 +1527,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>sm504:war</last-edited>
+          <last-edited>sm504:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

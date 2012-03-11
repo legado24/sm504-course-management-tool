@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import tr.edu.metu.ii.sm504.domain.User;
+import tr.edu.metu.ii.sm504.service.UserService;
 
 import java.util.HashMap;
 
@@ -18,11 +19,12 @@ import java.util.HashMap;
 @Service("userDetailsService")
 public class UserDetailsServiceImpl  implements UserDetailsService {
 
+    private UserService userService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = User.findUserByUsername(username);
+        User user = userService.findUserByUsername(username);
 
         if (user == null) {
             throw new UsernameNotFoundException("No user named : \"" + username + "\" is found.");
