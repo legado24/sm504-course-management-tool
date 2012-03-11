@@ -29,6 +29,7 @@
                         <h:outputLabel value="Permissions :" for="permissions"/>
                         <p:selectManyMenu value="#{roleBean.selectedPermissions}" id="permissions"
                                           converter="tr.edu.metu.ii.sm504.jsf.converter.PermissionConverter">
+                            <f:attribute name="collectionType" value="java.util.ArrayList" />
                             <f:selectItems value="#{permissionBean.allPermissions}" var="var" itemLabel="#{var.name}" itemValue="#{var}"/>
                         </p:selectManyMenu>
 

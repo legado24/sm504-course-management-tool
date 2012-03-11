@@ -20,14 +20,11 @@
                 <p:commandButton action="toRoleCreate" value="New Role" ajax="false" async="false"/>
                 <br/>
                 <br/>
-                <h:outputFormat id="noRecordsFound" value="#{messages.label_no_records_found}" rendered="#{allRoles.rowCount==0}">
-                    <f:param value="Roles" />
-                </h:outputFormat>
 
                 <p:dataTable id="list" value="#{flowScope.allRoles}" var="role" resizableColumns="false" paginator="true"
                              paginatorTemplate=" {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" rowsPerPageTemplate="5,10,25,50"
                              dynamic="true"
-                             rows="#{searchCriteria.pageSize}" page="#{searchCriteria.currentPage}">
+                             rows="#{searchRoleCriteria.pageSize}" page="#{searchRoleCriteria.currentPage}">
                     <p:columns value="#{roleBean.columns}" var="column" columnIndexVar="colIndex">
                         <f:facet name="header">
                             <h:outputText value="#{applicationBean.getColumnName(column)}" />

@@ -2,8 +2,11 @@ package tr.edu.metu.ii.sm504.jsf.dataModel;
 
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import tr.edu.metu.ii.sm504.domain.Role;
+import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
 import tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria;
+import tr.edu.metu.ii.sm504.service.RoleService;
 
 import java.util.List;
 import java.util.Map;
@@ -21,24 +24,24 @@ public class RoleLazyDataModel extends LazyDataModel<Role>{
 
     SearchRoleCriteria searchCriteria;
 
-    Role role;
+    RoleService roleService;
 
     private Role selected;
 
-    public RoleLazyDataModel(SearchRoleCriteria searchCriteria, Role role) {
+    public RoleLazyDataModel(SearchRoleCriteria searchCriteria, RoleService roleService) {
         this.searchCriteria = searchCriteria;
-        this.role = role;
+        this.roleService = roleService;
     }
 
     @Override
     public int getRowCount() {
-        return Role.getNumberOfRoles(searchCriteria);
+        return roleService.getNumberOfRoles(searchCriteria);
     }
 
     @Override
     public List<Role> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, String> filters) {
         searchCriteria.setCurrentPage(first / pageSize + 1);
-        return Role.findRoles(searchCriteria, first, sortField, sortOrder);
+        return roleService.findRoles(searchCriteria, first, sortField, sortOrder);
     }
 
     public Role getSelected() {
@@ -48,7 +51,5 @@ public class RoleLazyDataModel extends LazyDataModel<Role>{
     public void setSelected(Role selected) {
         this.selected = selected;
     }
-
-
 
 }

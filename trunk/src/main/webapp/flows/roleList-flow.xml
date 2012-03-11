@@ -3,11 +3,13 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-    <var name="searchCriteria" class="tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria" />
+    <persistence-context/>
+
+    <var name="searchRoleCriteria" class="tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria" />
 
     <view-state id="roleList" view="/pages/roleList.xhtml" redirect="false">
         <on-entry>
-            <set name="flowScope.allRoles" value="searchCriteria.getDataModel(roleBean.role)" />
+            <set name="flowScope.allRoles" value="searchRoleCriteria.getDataModel(roleService)" />
         </on-entry>
         <transition to="roleCreate" on="toRoleCreate"/>
         <transition on="view" to="roleView">

@@ -2,6 +2,7 @@ package tr.edu.metu.ii.sm504.domain;
 
 import java.util.*;
 import javax.persistence.*;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -17,9 +18,11 @@ import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 import tr.edu.metu.ii.sm504.jsf.ApplicationBean;
 
-@RooJavaBean
-@RooToString
-@RooJpaActiveRecord(table = "USER")
+//@RooJavaBean
+//@RooToString
+//@RooJpaActiveRecord(table = "USER")
+@Entity
+@Table(name = "USER")
 public class User extends AuditableEntity implements UserDetails {
 
     @NotNull
@@ -86,11 +89,83 @@ public class User extends AuditableEntity implements UserDetails {
         return status;
     }
 
-    public static User findUserByUsername(String username) {
-        if (StringUtils.isEmpty(username)) {
-            return null;
-        }
+    public String getUsername() {
+        return username;
+    }
 
-        return (User) entityManager().createQuery("select u from User u where u.username = '" + username + "'").getSingleResult();
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public byte[] getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

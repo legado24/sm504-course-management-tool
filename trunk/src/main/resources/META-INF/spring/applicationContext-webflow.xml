@@ -14,6 +14,7 @@
             <webflow:always-redirect-on-pause value="true"/>
         </webflow:flow-execution-attributes>
         <webflow:flow-execution-listeners>
+            <webflow:listener ref="jpaFlowExecutionListener" />
             <webflow:listener ref="facesContextListener"/>
             <webflow:listener ref="securityFlowExecutionListener" />
         </webflow:flow-execution-listeners>
@@ -23,6 +24,12 @@
     <webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/flows">
         <webflow:flow-location-pattern value="/**/*-flow.xml" />
     </webflow:flow-registry>
+
+    <bean id="jpaFlowExecutionListener"
+          class="org.springframework.webflow.persistence.JpaFlowExecutionListener">
+        <constructor-arg ref="entityManagerFactory" />
+        <constructor-arg ref="transactionManager" />
+    </bean>
 
     <!-- Configures the Spring Web Flow JSF integration -->
     <faces:flow-builder-services id="facesFlowBuilderServices" development="true" />

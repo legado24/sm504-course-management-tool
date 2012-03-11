@@ -15,7 +15,7 @@ import java.util.Properties;
  * Time: 14:05
  * To change this template use File | Settings | File Templates.
  */
-public class SpringPropertiesUtil extends PropertyPlaceholderConfigurer {
+public final class SpringPropertiesUtil extends PropertyPlaceholderConfigurer {
 
     private static Map<String, String> propertiesMap;
     // Default as in PropertyPlaceholderConfigurer
