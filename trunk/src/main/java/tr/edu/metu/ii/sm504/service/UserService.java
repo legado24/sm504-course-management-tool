@@ -2,12 +2,15 @@ package tr.edu.metu.ii.sm504.service;
 
 import org.apache.commons.lang3.StringUtils;
 import org.primefaces.model.SortOrder;
-import org.springframework.stereotype.Repository;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.domain.User;
 import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
+import tr.edu.metu.ii.sm504.security.role.UserEnum;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -19,6 +22,22 @@ import java.util.List;
  */
 @Service
 public class UserService extends AuditableEntityService<User>{
+
+
+    public boolean isInstructor(UsernamePasswordAuthenticationToken token) {
+        User user = (User) token.getPrincipal();
+        return UserEnum.isInstructor(user);
+    }
+
+    public boolean isAssistant(UsernamePasswordAuthenticationToken token) {
+        User user = (User) token.getPrincipal();
+        return UserEnum.isAssistant(user);
+    }
+
+    public boolean isStudent(UsernamePasswordAuthenticationToken token) {
+        User user = (User) token.getPrincipal();
+        return UserEnum.isStudent(user);
+    }
 
     public User findUserByUsername(String username) {
         if (StringUtils.isEmpty(username)) {

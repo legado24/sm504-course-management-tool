@@ -36,15 +36,18 @@
                                         <h:outputLabel value="Password :*"/>
                                         <h:inputSecret id="j_password" value="#{loginBean.password}" style="width: 100px;"/>
 
-                                        <p:commandButton ajax="false"
+                                        <p:commandButton
                                                          value="Login"
-                                                         action="login"/>
+                                                         action="login" update=":growlForm:growl"/>
                                     </h:panelGrid>
                                 </div>
                             </h:form>
                     </p:panel>
                 </h:panelGrid>
             </h:panelGrid>
+            <h:form prependId="false" id="growlForm">
+                <p:growl id="growl" showDetail="false"/>
+            </h:form>
         </h:panelGrid  >
   </h:body>
 </f:view>

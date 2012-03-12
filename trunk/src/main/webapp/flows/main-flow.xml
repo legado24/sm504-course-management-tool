@@ -3,8 +3,21 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
+    <persistence-context/>
 
-    <view-state id="main" view="/pages/main.xhtml" redirect="false">
+    <decision-state id="roleControl">
+        <if test="userService.isInstructor(currentUser)" then="instructorHome"/>
+        <if test="userService.isAssistant(currentUser)" then="assistantHome"/>
+        <if test="userService.isStudent(currentUser)" then="studentHome"/>
+    </decision-state>
+
+    <view-state id="instructorHome" view="/pages/main.xhtml" redirect="false">
+    </view-state>
+
+    <view-state id="assistantHome" view="/pages/main.xhtml" redirect="false">
+    </view-state>
+
+    <view-state id="studentHome" view="/pages/main.xhtml" redirect="false">
     </view-state>
 
 	<end-state id="finish" view="flowRedirect:login-flow"/>

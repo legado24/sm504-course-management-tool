@@ -61,6 +61,17 @@ public class ApplicationBean {
         submenu = new Submenu();
         submenu.setId("mainMenu");
         submenu.setLabel("Control Menu");
+
+        item = new MenuItem();
+        item.setId("homeMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_home}", String.class));
+        item.setUrl("main-flow");
+        item.setIcon("ui-icon ui-icon-document");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+
         item = new MenuItem();
         item.setId("roleListMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_menu_roleList}", String.class));
@@ -70,6 +81,7 @@ public class ApplicationBean {
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
+
         menuModel.addSubmenu(submenu);
     }
 }

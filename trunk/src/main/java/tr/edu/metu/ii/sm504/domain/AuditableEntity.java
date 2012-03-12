@@ -18,20 +18,20 @@ public abstract class AuditableEntity extends Entity {
 
     //@NotNull
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date updateTime;
 
     //@NotNull
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private User updatedBy;
 
     //@NotNull
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date creationTime;
 
     //@NotNull
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private User createdBy;
 
     public Date getUpdateTime() {
