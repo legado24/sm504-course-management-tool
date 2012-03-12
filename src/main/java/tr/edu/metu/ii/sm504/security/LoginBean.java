@@ -1,7 +1,10 @@
 package tr.edu.metu.ii.sm504.security;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
+import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -25,18 +28,28 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
+    @Autowired
     private AuthenticationService authenticationService;
 
     public String login() {
-        boolean success = authenticationService.login(username, password);
-        if (success) {
-            return "success";
-            //return "index.html"; // return to application but being logged now
-        } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Username or password incorrect."));
-            return "failure";
-            //return "login.xhtml";
+        try{
+
+            boolean success = authenticationService.login(username, password);
+            if (success) {
+                return "success";
+                //return "index.html"; // return to application but being logged now
+            } else {
+                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Username or password incorrect."));
+                return "failure";
+                //return "login.xhtml";
+            }
+        }catch (AuthenticationException e){
+            ApplicationUtil.handleExceptionForUI("Invalid username or password");
+        }catch (Throwable t){
+            ApplicationUtil.handleExceptionForUI(t, "Internal error occured");
         }
+
+        return "failure";
     }
 
 
