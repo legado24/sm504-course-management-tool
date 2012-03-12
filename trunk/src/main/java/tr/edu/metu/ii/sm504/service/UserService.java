@@ -25,7 +25,7 @@ public class UserService extends AuditableEntityService<User>{
             return null;
         }
 
-        return (User) getEntityManager().createQuery("select u from User u where u.username = ?").setParameter(0, username).getSingleResult();
+        return (User) getEntityManager().createQuery("select u from User u where u.username = ?").setParameter(1, username).getSingleResult();
     }
 
     public List<User> findUsers(SearchCriteria searchCriteria, int first, String orderBy, SortOrder sortOrder) {

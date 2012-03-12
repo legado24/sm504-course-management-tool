@@ -6,6 +6,7 @@ import org.primefaces.component.inputtext.InputText;
 import org.primefaces.component.message.Message;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.CloseEvent;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.roo.addon.jsf.managedbean.RooJsfManagedBean;
 import org.springframework.roo.addon.serializable.RooSerializable;
@@ -31,14 +32,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//@RooSerializable
-//@RooJsfManagedBean(entity = userService.class, beanName = "userBean")
 @Service
 @Configurable
 @ManagedBean(name = "userBean")
 @SessionScoped
 public class UserBean implements Serializable{
 
+    @Autowired
     private UserService userService;
 
     private String name = "Users";

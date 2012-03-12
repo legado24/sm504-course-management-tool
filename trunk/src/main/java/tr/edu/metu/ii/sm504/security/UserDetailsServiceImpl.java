@@ -1,5 +1,6 @@
 package tr.edu.metu.ii.sm504.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,6 +20,7 @@ import java.util.HashMap;
 @Service("userDetailsService")
 public class UserDetailsServiceImpl  implements UserDetailsService {
 
+    @Autowired
     private UserService userService;
 
     @Override

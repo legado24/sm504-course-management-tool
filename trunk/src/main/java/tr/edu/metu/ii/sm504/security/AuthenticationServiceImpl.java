@@ -15,6 +15,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 import javax.annotation.Resource;
 import javax.faces.bean.ApplicationScoped;
@@ -27,17 +28,14 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public boolean login(String username, String password) {
-        try {
-            Authentication authenticate = authenticationManager
-                    .authenticate(new UsernamePasswordAuthenticationToken(
-                            username, password));
-            if (authenticate.isAuthenticated()) {
-                SecurityContextHolder.getContext().setAuthentication(authenticate);
-                return true;
-            }
-        } catch (AuthenticationException e) {
-            e.printStackTrace();
+        Authentication authenticate = authenticationManager
+                .authenticate(new UsernamePasswordAuthenticationToken(
+                        username, password));
+        if (authenticate.isAuthenticated()) {
+            SecurityContextHolder.getContext().setAuthentication(authenticate);
+            return true;
         }
+
         return false;
     }
 

@@ -40,8 +40,8 @@
     </bean>
 
 
-    <bean id="entityFlowUrlHandler" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityFlowUrlHandler"/>
 
-    <!--<bean name="roleList-flow" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.RoleListFlowUrlHandler" />-->
+    <bean id="entityFlowUrlHandler" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.EntityFlowUrlHandler"/>
+    <!--<bean id="login-flow" class="tr.edu.metu.ii.sm504.jsf.flowUrlHandler.AppDefaultFlowUrlHandler" />-->
 
 </beans>
