@@ -43,7 +43,10 @@ public class EntityFlowUrlHandler extends DefaultFlowUrlHandler {
         Iterator entries = request.getParameterMap().entrySet().iterator();
         while (entries.hasNext()) {
             Map.Entry<String, Object[]> entry = (Map.Entry) entries.next();
-            if (!entry.getKey().equals("execution")) {
+            if (!(entry.getKey().equals("execution")
+                    || entry.getKey().contains("_SUBMIT")
+                    || entry.getKey().equals("javax.faces.ViewState")
+                    )) {
                 input.put(entry.getKey(), entry.getValue()[0]);
             }
         }
