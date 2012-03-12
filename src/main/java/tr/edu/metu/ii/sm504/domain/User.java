@@ -17,6 +17,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 import tr.edu.metu.ii.sm504.jsf.ApplicationBean;
+import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 //@RooJavaBean
 //@RooToString
@@ -71,7 +72,7 @@ public class User extends AuditableEntity implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return (new Date().before(dueDate));
+        return (ApplicationUtil.getCurrentDate().before(dueDate));
     }
 
     @Override

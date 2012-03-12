@@ -33,8 +33,8 @@
                             <f:selectItems value="#{permissionBean.allPermissions}" var="var" itemLabel="#{var.name}" itemValue="#{var}"/>
                         </p:selectManyMenu>
 
-                        <p:commandButton id="cancelBtn" value="#{messages.label_cancel}" action="endToCancel" immediate="true" ajax="false" async="false"/>
-                        <p:commandButton id="saveBtn" value="#{messages.label_save}" action="persist" update=":growlForm:growl" ajax="false" async="false"/>
+                        <p:commandButton id="cancelBtn" value="#{messages.label_cancel}" action="endToCancel" immediate="true"/>
+                        <p:commandButton id="saveBtn" value="#{messages.label_save}" action="persist" update=":growlForm:growl"/>
                     </h:panelGrid>
                 </h:form>
             </p:outputPanel>

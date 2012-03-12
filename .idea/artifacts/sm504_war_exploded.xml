@@ -8,6 +8,7 @@
           <element id="module-output" name="sm504" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: joda-time:joda-time:1.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.1.0.RELEASE" />

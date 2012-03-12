@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tr.edu.metu.ii.sm504.domain.AuditableEntity;
 import tr.edu.metu.ii.sm504.domain.Entity;
 import tr.edu.metu.ii.sm504.domain.User;
+import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 import java.util.Date;
 
@@ -22,7 +23,7 @@ public abstract class AuditableEntityService<T extends AuditableEntity> extends 
         try {
             User user = getEntityManager().find(User.class, 1L);
 
-            Date now = new Date();
+            Date now = ApplicationUtil.getCurrentDate();
             auditableEntity.setCreationTime(now);
             auditableEntity.setUpdateTime(now);
             auditableEntity.setCreatedBy(user);
@@ -36,7 +37,7 @@ public abstract class AuditableEntityService<T extends AuditableEntity> extends 
     public void flush(AuditableEntity auditableEntity) {
         User user = getEntityManager().find(User.class, 1L);
         auditableEntity.setUpdatedBy(user);
-        auditableEntity.setUpdateTime(new Date());
+        auditableEntity.setUpdateTime(ApplicationUtil.getCurrentDate());
         super.flush(auditableEntity);
     }
 

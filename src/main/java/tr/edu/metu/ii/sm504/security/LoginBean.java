@@ -2,6 +2,9 @@ package tr.edu.metu.ii.sm504.security;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AccountExpiredException;
+import org.springframework.security.authentication.CredentialsExpiredException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 import tr.edu.metu.ii.sm504.util.ApplicationUtil;
@@ -43,6 +46,12 @@ public class LoginBean implements Serializable {
                 return "failure";
                 //return "login.xhtml";
             }
+        }catch (LockedException e){
+            ApplicationUtil.handleExceptionForUI("Your account has been locked");
+        }catch (AccountExpiredException e){
+            ApplicationUtil.handleExceptionForUI("Your account has expired");
+        }catch (CredentialsExpiredException e){
+            ApplicationUtil.handleExceptionForUI("Your credentials have expired");
         }catch (AuthenticationException e){
             ApplicationUtil.handleExceptionForUI("Invalid username or password");
         }catch (Throwable t){
