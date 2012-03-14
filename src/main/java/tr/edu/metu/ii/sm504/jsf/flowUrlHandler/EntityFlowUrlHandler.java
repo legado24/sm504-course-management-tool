@@ -44,7 +44,7 @@ public class EntityFlowUrlHandler extends DefaultFlowUrlHandler {
         while (entries.hasNext()) {
             Map.Entry<String, Object[]> entry = (Map.Entry) entries.next();
             if (!(entry.getKey().equals("execution")
-                    || entry.getKey().equals("javax.faces.ViewState")
+                    || entry.getKey().startsWith("javax.faces.")
                     )) {
                 input.put(entry.getKey(), entry.getValue()[0]);
             }
