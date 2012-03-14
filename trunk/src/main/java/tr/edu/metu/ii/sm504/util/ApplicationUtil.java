@@ -1,6 +1,7 @@
 package tr.edu.metu.ii.sm504.util;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -19,21 +20,24 @@ public final class ApplicationUtil {
 
     public static final String EUROPE_ISTANBUL = "Europe/Istanbul";
 
-    public static void handleExceptionForUI(Throwable t){
-        handleExceptionForUI(t, null);
+    public static void raiseExceptionToUI(Throwable t){
+        FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Internal Exception Occured!", ExceptionUtils.getStackTrace(t));
+        FacesContext.getCurrentInstance().addMessage(null, facesMessage);
     }
-
-    public static void handleExceptionForUI(String message){
-        handleExceptionForUI(null, message);
+    public static void raiseMessageToUI(String messageHeader) {
+        raiseMessageToUI(messageHeader, "");
     }
-    
-    public static void handleExceptionForUI(Throwable t, String message) {
-        String msjDetail = "";
-        if (t != null) {
-            t.printStackTrace();
-            msjDetail = t.getMessage();
+    public static void raiseMessageToUI(String messageHeader, String messageDetail) {
+        raiseMessageToUI(messageHeader, messageDetail, null);
+    }
+    public static void raiseMessageToUI(String messageHeader, FacesMessage.Severity severity) {
+        raiseMessageToUI(messageHeader, "", severity);
+    }
+    public static void raiseMessageToUI(String messageHeader, String messageDetail, FacesMessage.Severity severity) {
+        FacesMessage facesMessage = new FacesMessage(messageHeader, messageDetail);
+        if (severity != null) {
+            facesMessage.setSeverity(severity);
         }
-        FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, message, msjDetail);
         FacesContext.getCurrentInstance().addMessage(null, facesMessage);
     }
 

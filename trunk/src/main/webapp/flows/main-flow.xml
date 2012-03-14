@@ -6,10 +6,16 @@
     <persistence-context/>
 
     <decision-state id="roleControl">
+        <if test="userService.isLoginEnabled() == false" then="authenticateAsInstructor"/>
         <if test="userService.isInstructor(currentUser)" then="instructorHome"/>
         <if test="userService.isAssistant(currentUser)" then="assistantHome"/>
         <if test="userService.isStudent(currentUser)" then="studentHome"/>
     </decision-state>
+
+    <action-state id="authenticateAsInstructor">
+        <evaluate expression="loginBean.authenticateAsInstructor()"/>
+        <transition to="instructorHome"/>
+    </action-state>
 
     <view-state id="instructorHome" view="/pages/main.xhtml" redirect="false">
     </view-state>
