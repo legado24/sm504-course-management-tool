@@ -17,9 +17,7 @@
             <evaluate expression="permissionBean.findAllPermissions()"/>
         </on-render>
         <transition on="endToCancel" to="cancel" bind="false"/>
-        <transition on="persist" to="save">
-            <evaluate expression="roleBean.persist()"/>
-        </transition>
+        <transition on="persist" to="persistAction"/>
     </view-state>
 
     <view-state id="editState" view="/pages/roleEdit.xhtml">
@@ -28,12 +26,17 @@
             <evaluate expression="permissionBean.findAllPermissions()"/>
         </on-render>
         <transition on="endToCancel" to="cancel" bind="false"/>
-        <transition on="persist" to="save">
-            <evaluate expression="roleBean.persist()"/>
-        </transition>
+        <transition on="persist" to="persistAction"/>
     </view-state>
 
+    <action-state id="persistAction">
+        <evaluate expression="roleBean.persist()"/>
+        <transition to="save"/>
+        <transition to="editOrCreate" on-exception="java.lang.Throwable"/>
+    </action-state>
 
     <end-state id="cancel" view="flowRedirect:roleList-flow"/>
-    <end-state id="save" commit="true" view="flowRedirect:roleList-flow"/>
+    <end-state id="save" commit="true" view="flowRedirect:roleList-flow">
+        <attribute name="PRESERVE_MESSAGES" value="true"/>
+    </end-state>
 </flow>

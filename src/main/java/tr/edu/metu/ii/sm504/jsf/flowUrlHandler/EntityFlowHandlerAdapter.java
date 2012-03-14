@@ -43,7 +43,8 @@ public class EntityFlowHandlerAdapter extends JsfFlowHandlerAdapter {
                 Iterator entries = request.getParameterMap().entrySet().iterator();
                 while (entries.hasNext()) {
                     Map.Entry<String, Object[]> entry = (Map.Entry) entries.next();
-                    if (!entry.getKey().equals("execution")) {
+                    if (!(entry.getKey().equals("execution")
+                            || entry.getKey().equals("javax.faces.ViewState"))) {
                         parameterMap.put(entry.getKey(), entry.getValue()[0]);
                     }
                 }

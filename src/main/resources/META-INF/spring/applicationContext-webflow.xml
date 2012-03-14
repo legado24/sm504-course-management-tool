@@ -17,6 +17,7 @@
             <webflow:listener ref="jpaFlowExecutionListener" />
             <webflow:listener ref="facesContextListener"/>
             <webflow:listener ref="securityFlowExecutionListener" />
+            <webflow:listener ref="messagePreserver" />
         </webflow:flow-execution-listeners>
     </webflow:flow-executor>
 
@@ -42,4 +43,5 @@
     <!-- Installs a listener to apply Spring Security authorities -->
     <bean id="securityFlowExecutionListener" class="org.springframework.webflow.security.SecurityFlowExecutionListener" />
 
+    <bean id="messagePreserver" class="tr.edu.metu.ii.sm504.jsf.util.MessagePreserver"/>
 </beans>

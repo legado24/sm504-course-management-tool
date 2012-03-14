@@ -9,6 +9,7 @@ import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.domain.User;
 import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
 import tr.edu.metu.ii.sm504.security.role.UserEnum;
+import tr.edu.metu.ii.sm504.util.SpringPropertiesUtil;
 
 import java.util.Iterator;
 import java.util.List;
@@ -23,6 +24,15 @@ import java.util.List;
 @Service
 public class UserService extends AuditableEntityService<User>{
 
+    public boolean isLoginEnabled() {
+        String loginDisabled = SpringPropertiesUtil.getProperty("login.disabled");
+        boolean loginAvailability = false;
+        if (StringUtils.isEmpty(loginDisabled) && loginDisabled.equalsIgnoreCase("false")) {
+            loginAvailability = true;
+        }
+
+        return loginAvailability;
+    }
 
     public boolean isInstructor(UsernamePasswordAuthenticationToken token) {
         User user = (User) token.getPrincipal();
