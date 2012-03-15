@@ -11,6 +11,11 @@
         <title>#{applicationBean.appName}</title>
         <h:outputStylesheet library="css" name="standard.css"/>
     </h:head>
+
+    <h:form prependId="false" id="growlForm">
+        <p:growl id="loginGrowl" showDetail="false"/>
+    </h:form>
+
     <h:body>
         <h:panelGrid cellspacing="0" cellpadding="0" styleClass="wrapper">
             <h:panelGrid columns="2" columnClasses="menu,content">
@@ -38,7 +43,7 @@
 
                                         <p:commandButton
                                                          value="Login"
-                                                         action="login" update=":growlForm:growl"/>
+                                                         action="login" update=":growlForm:loginGrowl"/>
                                     </h:panelGrid>
                                 </div>
                             </h:form>

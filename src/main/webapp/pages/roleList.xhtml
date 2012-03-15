@@ -53,7 +53,7 @@
             <p:outputPanel id="deletePanel">
                 <h:form id="deleteForm">
                     <p:commandButton id="deleteNoButton" value="#{messages.label_no}" onclick="deleteDialog.hide()" type="button" />
-                    <p:commandButton id="deleteYesButton" value="#{messages.label_yes}" action="delete" update=":dataForm:data :growlForm:growl" oncomplete="deleteDialog.hide()"/>
+                    <p:commandButton id="deleteYesButton" value="#{messages.label_yes}" action="delete" update=":dataForm:data :growlForm:info" oncomplete="deleteDialog.hide()"/>
                 </h:form>
             </p:outputPanel>
         </p:confirmDialog>

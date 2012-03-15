@@ -32,13 +32,11 @@ public class RoleBean implements Serializable {
 
     public void setupFormForCreate() {
         this.reset();
-        this.setRole(new Role());
     }
 
     public void setupFormForEdit(Long id) {
         this.reset();
         role = roleService.findRole(id);
-        this.setSelectedPermissions(role.getPermissions());
     }
 
     public void setupFormForView(Long id) {
@@ -59,8 +57,7 @@ public class RoleBean implements Serializable {
 
             ApplicationUtil.raiseMessageToUI(message);
             reset();
-            //return findAllRoles();
-        }catch (Throwable t){
+        } catch (Throwable t) {
             ApplicationUtil.raiseExceptionToUI(t);
         }
         return null;
@@ -75,11 +72,7 @@ public class RoleBean implements Serializable {
 
     private List<Role> allRoles;
 
-    private boolean dataVisible = false;
-
     private List<String> columns;
-
-    private List<Permission> selectedPermissions;
 
     @PostConstruct
     public void init() {
@@ -106,50 +99,15 @@ public class RoleBean implements Serializable {
 
     public String findAllRoles() {
         allRoles = roleService.findAllRoles();
-        dataVisible = !allRoles.isEmpty();
         return null;
     }
 
-    public boolean isDataVisible() {
-        return dataVisible;
-    }
-
-    public void setDataVisible(boolean dataVisible) {
-        this.dataVisible = dataVisible;
-    }
-
     public Role getRole() {
-        if (role == null) {
-            role = new Role();
-        }
         return role;
     }
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public List<Permission> getSelectedPermissions() {
-        return selectedPermissions;
-    }
-
-    public void setSelectedPermissions(List<Permission> selectedPermissions) {
-        if (selectedPermissions != null) {
-            role.setPermissions(selectedPermissions);
-        }
-        this.selectedPermissions = selectedPermissions;
-    }
-
-    public String onEdit() {
-        if (role != null && role.getPermissions() != null) {
-            selectedPermissions = new ArrayList<Permission>(role.getPermissions());
-        }
-        return null;
-    }
-
-    public String displayList() {
-        findAllRoles();
-        return "role";
     }
 
     public String delete() {
@@ -161,8 +119,7 @@ public class RoleBean implements Serializable {
     }
 
     public void reset() {
-        role = null;
-        selectedPermissions = null;
+        role = new Role();
     }
 
 }

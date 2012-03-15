@@ -19,10 +19,12 @@ import java.util.*;
 public final class ApplicationUtil {
 
     public static final String EUROPE_ISTANBUL = "Europe/Istanbul";
+    public static final String GROWL_WITH_DETAILS = "growlForm:details";
+    public static final String GROWL_WITHOUT_DETAILS = "growlForm:info";
 
     public static void raiseExceptionToUI(Throwable t){
         FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Internal Exception Occured!", ExceptionUtils.getStackTrace(t));
-        FacesContext.getCurrentInstance().addMessage(null, facesMessage);
+        FacesContext.getCurrentInstance().addMessage(GROWL_WITH_DETAILS, facesMessage);
     }
     public static void raiseMessageToUI(String messageHeader) {
         raiseMessageToUI(messageHeader, "");
@@ -38,7 +40,11 @@ public final class ApplicationUtil {
         if (severity != null) {
             facesMessage.setSeverity(severity);
         }
-        FacesContext.getCurrentInstance().addMessage(null, facesMessage);
+        if (StringUtils.isEmpty(messageDetail)) {
+            FacesContext.getCurrentInstance().addMessage(GROWL_WITHOUT_DETAILS, facesMessage);
+        } else {
+            FacesContext.getCurrentInstance().addMessage(GROWL_WITH_DETAILS, facesMessage);
+        }
     }
 
     public static final Date getCurrentDate(){
