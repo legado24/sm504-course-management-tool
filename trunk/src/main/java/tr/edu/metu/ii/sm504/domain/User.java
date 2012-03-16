@@ -1,63 +1,65 @@
 package tr.edu.metu.ii.sm504.domain;
 
-import java.util.*;
-import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-
-import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
-import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.roo.classpath.operations.jsr303.RooUploadedFile;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
-import tr.edu.metu.ii.sm504.jsf.ApplicationBean;
 import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
-//@RooJavaBean
-//@RooToString
-//@RooJpaActiveRecord(table = "USER")
+import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+
 @Entity
 @Table(name = "USER")
-public class User extends AuditableEntity implements UserDetails {
+public class User extends AuditableEntity implements IUser {
 
     @NotNull
+    @Column(name = "USERNAME")
     private String username;
 
     @NotNull
+    @Column(name = "NAME")
     private String name;
 
     @NotNull
+    @Column(name = "SURNAME")
     private String surname;
 
     @NotNull
+    @Column(name = "PASSWORD")
     private String password;
 
     @NotNull
     @Email
+    @Column(name = "EMAIL")
     private String email;
 
+    @Column(name = "ADDRESS")
     private String address;
 
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
+    @Column(name = "DUE_DATE")
     private Date dueDate;
 
     @NotNull
+    @Column(name = "STATUS")
     private Boolean status;
 
     @RooUploadedFile(contentType = "image/jpeg")
     @Lob
+    @Column(name = "PHOTO")
     private byte[] photo;
 
     @NotNull
     @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "USER_ROLE",
+            joinColumns = {@JoinColumn(name = "USER_ID")}, inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
     private Set<Role> roles = new HashSet<Role>();
 
     @Override

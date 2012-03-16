@@ -8,17 +8,13 @@ package tr.edu.metu.ii.sm504.security;
  * To change this template use File | Settings | File Templates.
  */
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 import javax.annotation.Resource;
-import javax.faces.bean.ApplicationScoped;
 
 @Service("authenticationService")
 public class AuthenticationServiceImpl implements AuthenticationService {

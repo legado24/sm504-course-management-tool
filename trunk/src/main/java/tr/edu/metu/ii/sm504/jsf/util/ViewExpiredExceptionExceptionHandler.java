@@ -1,8 +1,5 @@
 package tr.edu.metu.ii.sm504.jsf.util;
 
-import java.util.Iterator;
-import java.util.Map;
-
 import javax.faces.FacesException;
 import javax.faces.application.NavigationHandler;
 import javax.faces.application.ViewExpiredException;
@@ -11,6 +8,8 @@ import javax.faces.context.ExceptionHandlerWrapper;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ExceptionQueuedEvent;
 import javax.faces.event.ExceptionQueuedEventContext;
+import java.util.Iterator;
+import java.util.Map;
 
 public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrapper {
     private ExceptionHandler wrapped;

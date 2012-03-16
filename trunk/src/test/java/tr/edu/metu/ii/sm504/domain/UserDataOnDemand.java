@@ -2,9 +2,8 @@ package tr.edu.metu.ii.sm504.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.dod.RooDataOnDemand;
 import org.springframework.stereotype.Component;
-import tr.edu.metu.ii.sm504.service.UserService;
+import tr.edu.metu.ii.sm504.repository.UserRepository;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -17,7 +16,7 @@ public class UserDataOnDemand {
     private Random rnd = new SecureRandom();
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
     private List<User> data;
 
@@ -114,14 +113,14 @@ public class UserDataOnDemand {
         }
         User obj = data.get(index);
         Long id = obj.getId();
-        return userService.findUser(id);
+        return userRepository.findUser(id);
     }
 
     public User getRandomUser() {
         init();
         User obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return userService.findUser(id);
+        return userRepository.findUser(id);
     }
 
     public boolean modifyUser(User obj) {
@@ -131,7 +130,7 @@ public class UserDataOnDemand {
     public void init() {
         int from = 0;
         int to = 10;
-        data = userService.findUserEntries(from, to);
+        data = userRepository.findUserEntries(from, to);
         if (data == null) {
             throw new IllegalStateException("Find entries implementation for 'User' illegally returned null");
         }
@@ -143,7 +142,7 @@ public class UserDataOnDemand {
         for (int i = 0; i < 10; i++) {
             User obj = getNewTransientUser(i);
             try {
-                userService.persist(obj);
+                userRepository.persist(obj);
             } catch (ConstraintViolationException e) {
                 StringBuilder msg = new StringBuilder();
                 for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
@@ -152,7 +151,7 @@ public class UserDataOnDemand {
                 }
                 throw new RuntimeException(msg.toString(), e);
             }
-            userService.flush(obj);
+            userRepository.flush(obj);
             data.add(obj);
         }
     }

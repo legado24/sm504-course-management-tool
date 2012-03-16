@@ -1,13 +1,10 @@
 package tr.edu.metu.ii.sm504.domain;
 
-import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
-import org.springframework.roo.addon.tostring.RooToString;
-import org.springframework.transaction.annotation.Transactional;
+import java.util.Date;
 
 //@RooJavaBean
 //@RooToString
@@ -16,21 +13,21 @@ import org.springframework.transaction.annotation.Transactional;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class AuditableEntity extends Entity {
 
-    //@NotNull
+    @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date updateTime;
 
-    //@NotNull
+    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     private User updatedBy;
 
-    //@NotNull
+    @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date creationTime;
 
-    //@NotNull
+    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     private User createdBy;
 

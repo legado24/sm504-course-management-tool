@@ -1,14 +1,11 @@
 package tr.edu.metu.ii.sm504.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.dod.RooDataOnDemand;
 import org.springframework.stereotype.Component;
-import tr.edu.metu.ii.sm504.service.RoleService;
+import tr.edu.metu.ii.sm504.repository.RoleRepository;
 
 import javax.validation.ConstraintViolation;
-
 import javax.validation.ConstraintViolationException;
 import java.security.SecureRandom;
 import java.util.*;
@@ -21,7 +18,7 @@ public class RoleDataOnDemand {
     private List<Role> data;
 
     @Autowired
-    private RoleService roleService;
+    private RoleRepository roleRepository;
 
     @Autowired
     private UserDataOnDemand userDataOnDemand;
@@ -77,14 +74,14 @@ public class RoleDataOnDemand {
         }
         Role obj = data.get(index);
         Long id = obj.getId();
-        return roleService.findRole(id);
+        return roleRepository.findRole(id);
     }
 
     public Role getRandomRole() {
         init();
         Role obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return roleService.findRole(id);
+        return roleRepository.findRole(id);
     }
 
     public boolean modifyRole(Role obj) {
@@ -94,7 +91,7 @@ public class RoleDataOnDemand {
     public void init() {
         int from = 0;
         int to = 10;
-        data = roleService.findRoleEntries(from, to);
+        data = roleRepository.findRoleEntries(from, to);
         if (data == null) {
             throw new IllegalStateException("Find entries implementation for 'Role' illegally returned null");
         }
@@ -106,7 +103,7 @@ public class RoleDataOnDemand {
         for (int i = 0; i < 10; i++) {
             Role obj = getNewTransientRole(i);
             try {
-                roleService.persist(obj);
+                roleRepository.persist(obj);
             } catch (ConstraintViolationException e) {
                 StringBuilder msg = new StringBuilder();
                 for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
@@ -115,7 +112,7 @@ public class RoleDataOnDemand {
                 }
                 throw new RuntimeException(msg.toString(), e);
             }
-            roleService.flush(obj);
+            roleRepository.flush(obj);
             data.add(obj);
         }
     }

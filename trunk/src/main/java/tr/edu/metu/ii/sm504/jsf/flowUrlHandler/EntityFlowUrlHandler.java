@@ -2,7 +2,6 @@ package tr.edu.metu.ii.sm504.jsf.flowUrlHandler;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.webflow.context.servlet.DefaultFlowUrlHandler;
-import org.springframework.webflow.core.collection.AttributeMap;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;

@@ -1,14 +1,14 @@
 package tr.edu.metu.ii.sm504.service;
 
 import org.primefaces.model.SortOrder;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tr.edu.metu.ii.sm504.domain.AuditableEntity;
 import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
-import tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria;
+import tr.edu.metu.ii.sm504.repository.RoleRepository;
 
-import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
 
@@ -20,38 +20,44 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class RoleService extends AuditableEntityService<Role>{
+public class RoleService implements Serializable {
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     public List<Role> findRoles(SearchCriteria searchCriteria, int first, String orderBy, SortOrder sortOrder) {
-        orderBy = (orderBy != null) ? orderBy : "name";
-        String orderDirection = (SortOrder.ASCENDING.equals(sortOrder)) ? " ASC" : " DESC";
-        return getEntityManager().createQuery("select r from Role r order by r." + orderBy + orderDirection, Role.class)
-                .setFirstResult(first).setMaxResults(searchCriteria.getPageSize())
-                .getResultList();
+        return roleRepository.findRoles(searchCriteria, first, orderBy, sortOrder);
     }
 
-
     public int getNumberOfRoles(SearchCriteria searchCriteria) {
-        Long l = (Long) getEntityManager().createQuery("select count(r.id) from Role r")
-                .getSingleResult();
-        return l.intValue();
+        return roleRepository.getNumberOfRoles(searchCriteria);
     }
 
     public long countRoles() {
-        return getEntityManager().createQuery("SELECT COUNT(o) FROM Role o", Long.class).getSingleResult();
+        return roleRepository.countRoles();
     }
 
     public List<Role> findAllRoles() {
-        return getEntityManager().createQuery("SELECT o FROM Role o", Role.class).getResultList();
+        return roleRepository.findAllRoles();
     }
 
     public Role findRole(Long id) {
-        if (id == null) return null;
-        return getEntityManager().find(Role.class, id);
+        return roleRepository.findRole(id);
     }
 
     public List<Role> findRoleEntries(int firstResult, int maxResults) {
-        return getEntityManager().createQuery("SELECT o FROM Role o", Role.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return roleRepository.findRoleEntries(firstResult, maxResults);
     }
 
+    public void persist(Role role) {
+        roleRepository.persist(role);
+    }
+
+    public Role merge(Role role) {
+        return roleRepository.merge(role);
+    }
+
+    public void remove(Role role) {
+        roleRepository.remove(role);
+    }
 }

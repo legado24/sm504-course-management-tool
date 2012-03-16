@@ -1,12 +1,10 @@
 package tr.edu.metu.ii.sm504.domain;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
-import org.springframework.roo.addon.tostring.RooToString;
-
 import java.util.ArrayList;
 import java.util.List;
 

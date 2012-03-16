@@ -2,9 +2,7 @@ package tr.edu.metu.ii.sm504.jsf.dataModel;
 
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
-import org.springframework.beans.factory.annotation.Autowired;
 import tr.edu.metu.ii.sm504.domain.Role;
-import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
 import tr.edu.metu.ii.sm504.jsf.search.SearchRoleCriteria;
 import tr.edu.metu.ii.sm504.service.RoleService;
 

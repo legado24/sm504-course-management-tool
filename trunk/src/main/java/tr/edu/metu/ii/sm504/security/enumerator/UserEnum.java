@@ -1,4 +1,4 @@
-package tr.edu.metu.ii.sm504.security.role;
+package tr.edu.metu.ii.sm504.security.enumerator;
 
 import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.domain.User;

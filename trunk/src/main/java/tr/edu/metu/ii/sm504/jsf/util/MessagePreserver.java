@@ -7,13 +7,14 @@ package tr.edu.metu.ii.sm504.jsf.util;
  * Time: 06:24
  * To change this template use File | Settings | File Templates.
  */
-import java.io.Serializable;
 
 import org.springframework.binding.message.DefaultMessageContext;
 import org.springframework.webflow.core.collection.MutableAttributeMap;
 import org.springframework.webflow.execution.FlowExecutionListenerAdapter;
 import org.springframework.webflow.execution.FlowSession;
 import org.springframework.webflow.execution.RequestContext;
+
+import java.io.Serializable;
 
 public class MessagePreserver extends FlowExecutionListenerAdapter  {
     public static final String PRESERVE_MESSAGES = "PRESERVE_MESSAGES";
