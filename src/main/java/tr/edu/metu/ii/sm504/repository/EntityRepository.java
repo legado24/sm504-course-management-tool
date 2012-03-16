@@ -1,7 +1,5 @@
-package tr.edu.metu.ii.sm504.service;
+package tr.edu.metu.ii.sm504.repository;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tr.edu.metu.ii.sm504.domain.Entity;
 
@@ -16,10 +14,10 @@ import java.io.Serializable;
  * Time: 01:37
  * To change this template use File | Settings | File Templates.
  */
-public abstract class EntityService<T extends Entity> implements Serializable {
+public abstract class EntityRepository<T extends Entity> implements Serializable{
 
     @PersistenceContext
-    private EntityManager entityManager;
+    private transient EntityManager entityManager;
 
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;

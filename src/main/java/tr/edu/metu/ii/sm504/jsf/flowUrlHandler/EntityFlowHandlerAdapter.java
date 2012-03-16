@@ -1,18 +1,14 @@
 package tr.edu.metu.ii.sm504.jsf.flowUrlHandler;
 
 import org.springframework.faces.webflow.JsfFlowHandlerAdapter;
-import org.springframework.web.util.WebUtils;
 import org.springframework.webflow.core.FlowException;
 import org.springframework.webflow.core.collection.LocalAttributeMap;
 import org.springframework.webflow.core.collection.MutableAttributeMap;
 import org.springframework.webflow.execution.repository.NoSuchFlowExecutionException;
-import org.springframework.webflow.mvc.servlet.FlowHandlerAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;

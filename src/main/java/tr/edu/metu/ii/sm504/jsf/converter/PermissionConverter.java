@@ -2,8 +2,6 @@ package tr.edu.metu.ii.sm504.jsf.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.jsf.converter.RooJsfConverter;
-import org.springframework.stereotype.Component;
 import tr.edu.metu.ii.sm504.domain.Permission;
 import tr.edu.metu.ii.sm504.service.PermissionService;
 

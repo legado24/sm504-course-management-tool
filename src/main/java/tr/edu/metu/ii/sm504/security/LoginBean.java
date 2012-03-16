@@ -1,18 +1,20 @@
 package tr.edu.metu.ii.sm504.security;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.CredentialsExpiredException;
 import org.springframework.security.authentication.LockedException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import tr.edu.metu.ii.sm504.domain.IUser;
 import tr.edu.metu.ii.sm504.domain.User;
+import tr.edu.metu.ii.sm504.service.UserService;
 import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
@@ -34,8 +36,12 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
+    private IUser currentUser;
+
     @Autowired
     private AuthenticationService authenticationService;
+    @Autowired
+    private UserService userService;
     
     @PersistenceContext
     private EntityManager entityManager;
@@ -45,6 +51,10 @@ public class LoginBean implements Serializable {
 
             boolean success = authenticationService.login(username, password);
             if (success) {
+                UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+                if (userService.isInstructor(token)) {
+                    currentUser = userService.findInstructorByUser((User) token.getPrincipal());
+                }
                 return "success";
                 //return "index.html"; // return to application but being logged now
             } else {
@@ -96,5 +106,13 @@ public class LoginBean implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public IUser getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(IUser currentUser) {
+        this.currentUser = currentUser;
     }
 }

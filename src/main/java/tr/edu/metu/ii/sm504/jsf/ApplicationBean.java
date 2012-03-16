@@ -1,14 +1,10 @@
 package tr.edu.metu.ii.sm504.jsf;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.primefaces.component.menuitem.MenuItem;
 import org.primefaces.component.submenu.Submenu;
 import org.primefaces.model.DefaultMenuModel;
 import org.primefaces.model.MenuModel;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.jsf.application.RooJsfApplicationBean;
 
 import javax.annotation.PostConstruct;
 import javax.el.ELContext;
@@ -17,6 +13,8 @@ import javax.faces.application.Application;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 //@RooJsfApplicationBean
 @ManagedBean
@@ -31,7 +29,7 @@ public class ApplicationBean {
     }
 
     public String getAppName() {
-        return "Sm504";
+        return "TESPIT";
     }
 
     public String getColumnName(String column) {

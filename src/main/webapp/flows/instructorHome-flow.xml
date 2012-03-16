@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+    <persistence-context/>
+
+    <var name="searchCourseCriteria" class="tr.edu.metu.ii.sm504.jsf.search.SearchCourseCriteria" />
+
+    <view-state id="instructorHome" view="/pages/instructorHome.xhtml" redirect="false">
+        <on-entry>
+            <set name="flowScope.activeCourses" value="courseService.findAllActiveCoursesOfInstructor(loginBean.currentUser)" />
+        </on-entry>
+    </view-state>
+</flow>

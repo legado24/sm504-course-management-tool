@@ -2,16 +2,21 @@ package tr.edu.metu.ii.sm504.service;
 
 import org.apache.commons.lang3.StringUtils;
 import org.primefaces.model.SortOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tr.edu.metu.ii.sm504.domain.Role;
+import tr.edu.metu.ii.sm504.domain.IUser;
+import tr.edu.metu.ii.sm504.domain.Instructor;
 import tr.edu.metu.ii.sm504.domain.User;
 import tr.edu.metu.ii.sm504.jsf.search.SearchCriteria;
-import tr.edu.metu.ii.sm504.security.role.UserEnum;
+import tr.edu.metu.ii.sm504.repository.InstructorRepository;
+import tr.edu.metu.ii.sm504.repository.UserRepository;
+import tr.edu.metu.ii.sm504.security.enumerator.UserEnum;
 import tr.edu.metu.ii.sm504.util.SpringPropertiesUtil;
 
-import java.util.Iterator;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -22,7 +27,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class UserService extends AuditableEntityService<User>{
+public class UserService implements Serializable {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private InstructorRepository instructorRepository;
 
     public boolean isLoginEnabled() {
         String loginDisabled = SpringPropertiesUtil.getProperty("login.disabled");
@@ -49,50 +60,48 @@ public class UserService extends AuditableEntityService<User>{
         return UserEnum.isStudent(user);
     }
 
-    public User findUserByUsername(String username) {
-        if (StringUtils.isEmpty(username)) {
-            return null;
-        }
 
-        return (User) getEntityManager().createQuery("select u from User u where u.username = ?").setParameter(1, username).getSingleResult();
+    public User findUserByUsername(String username) {
+        return userRepository.findUserByUsername(username);
     }
 
     public List<User> findUsers(SearchCriteria searchCriteria, int first, String orderBy, SortOrder sortOrder) {
-        orderBy = (orderBy != null) ? orderBy : "name";
-        String orderDirection = (SortOrder.ASCENDING.equals(sortOrder)) ? " ASC" : " DESC";
-        return getEntityManager().createQuery("select r from User r order by r." + orderBy + orderDirection, User.class)
-                .setFirstResult(first).setMaxResults(searchCriteria.getPageSize())
-                .getResultList();
+        return userRepository.findUsers(searchCriteria, first, orderBy, sortOrder);
     }
 
-
     public int getNumberOfUsers(SearchCriteria searchCriteria) {
-        Long l = (Long) getEntityManager().createQuery("select count(r.id) from User r")
-                .getSingleResult();
-        return l.intValue();
+        return userRepository.getNumberOfUsers(searchCriteria);
     }
 
     public long countUsers() {
-        return getEntityManager().createQuery("SELECT COUNT(o) FROM User o", Long.class).getSingleResult();
+        return userRepository.countUsers();
     }
 
     public List<User> findAllUsers() {
-        return getEntityManager().createQuery("SELECT o FROM User o", User.class).getResultList();
+        return userRepository.findAllUsers();
     }
 
     public User findUser(Long id) {
-        if (id == null) return null;
-        return getEntityManager().find(User.class, id);
+        return userRepository.findUser(id);
     }
 
     public List<User> findUserEntries(int firstResult, int maxResults) {
-        return getEntityManager().createQuery("SELECT o FROM User o", User.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return userRepository.findUserEntries(firstResult, maxResults);
     }
 
-    @Transactional
+    public void persist(User user) {
+        userRepository.persist(user);
+    }
+
     public User merge(User updatedUser) {
-        User merged = this.getEntityManager().merge(updatedUser);
-        this.getEntityManager().flush();
-        return merged;
+        return userRepository.merge(updatedUser);
+    }
+
+    public void remove(User user) {
+        userRepository.remove(user);
+    }
+
+    public Instructor findInstructorByUser(User user) {
+        return instructorRepository.findInstructorByUser(user);
     }
 }

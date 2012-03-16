@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+
+    <h:form prependId="false" id="activeCourseForm">
+        <p:panel id="activeCoursePanel" toggleable="true" toggleSpeed="250">
+            <f:facet name="header">
+                <h:outputText value="#{messages.label_active_courses}"/>
+            </f:facet>
+
+            <p:dataTable id="list" value="#{flowScope.activeCourses}" var="activeCourse" resizableColumns="false"
+                         paginator="true"
+                         paginatorTemplate=" {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,25,50"
+                         dynamic="true"
+                         rows="#{searchCourseCriteria.pageSize}" page="#{searchCourseCriteria.currentPage}">
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{messages.course_name}"/>
+                    </f:facet>
+                    <h:outputText value="#{activeCourse.name}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{messages.course_instructor}"/>
+                    </f:facet>
+                    <h:outputText value="#{activeCourse.instructor.name} #{activeCourse.instructor.surname}"/>
+                </p:column>
+                <p:column styleClass="action-column">
+                    <f:facet name="header">
+                        <h:outputText value="Actions"/>
+                    </f:facet>
+
+                    <p:commandButton id="viewButton" icon="ui-icon-zoomin" action="view"
+                                     title="#{messages.label_view}">
+                        <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}"/>
+                    </p:commandButton>
+                    <p:tooltip for="viewButton" value="#{messages.label_view}" showEffect="fade"
+                               hideEffect="fade"/>
+                    <p:commandButton id="editButton" icon="ui-icon-pencil" action="edit"
+                                     title="#{messages.label_edit}">
+                        <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}"/>
+                    </p:commandButton>
+                    <p:tooltip for="editButton" value="#{messages.label_edit}" showEffect="fade"
+                               hideEffect="fade"/>
+                    <p:commandButton id="deleteButton" icon="ui-icon-trash" oncomplete="deleteDialog.show()"
+                                     title="#{messages.label_delete}">
+                        <f:setPropertyActionListener value="#{role}" target="#{flowScope.allRoles.selected}"/>
+                    </p:commandButton>
+                    <p:tooltip for="deleteButton" value="#{messages.label_delete}" showEffect="fade"
+                               hideEffect="fade"/>
+                </p:column>
+            </p:dataTable>
+        </p:panel>
+    </h:form>
+</ui:composition>
+</html>

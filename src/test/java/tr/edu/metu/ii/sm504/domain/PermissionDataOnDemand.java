@@ -2,9 +2,8 @@ package tr.edu.metu.ii.sm504.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.dod.RooDataOnDemand;
 import org.springframework.stereotype.Component;
-import tr.edu.metu.ii.sm504.service.PermissionService;
+import tr.edu.metu.ii.sm504.repository.PermissionRepository;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -18,7 +17,7 @@ public class PermissionDataOnDemand {
     private Random rnd = new SecureRandom();
 
     @Autowired
-    private PermissionService permissionService;
+    private PermissionRepository permissionRepository;
 
     private List<Permission> data;
 
@@ -70,14 +69,14 @@ public class PermissionDataOnDemand {
         }
         Permission obj = data.get(index);
         Long id = obj.getId();
-        return permissionService.findPermission(id);
+        return permissionRepository.findPermission(id);
     }
 
     public Permission getRandomPermission() {
         init();
         Permission obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return permissionService.findPermission(id);
+        return permissionRepository.findPermission(id);
     }
 
     public boolean modifyPermission(Permission obj) {
@@ -87,7 +86,7 @@ public class PermissionDataOnDemand {
     public void init() {
         int from = 0;
         int to = 10;
-        data = permissionService.findPermissionEntries(from, to);
+        data = permissionRepository.findPermissionEntries(from, to);
         if (data == null) {
             throw new IllegalStateException("Find entries implementation for 'Permission' illegally returned null");
         }
@@ -99,7 +98,7 @@ public class PermissionDataOnDemand {
         for (int i = 0; i < 10; i++) {
             Permission obj = getNewTransientPermission(i);
             try {
-                permissionService.persist(obj);
+                permissionRepository.persist(obj);
             } catch (ConstraintViolationException e) {
                 StringBuilder msg = new StringBuilder();
                 for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
@@ -108,7 +107,7 @@ public class PermissionDataOnDemand {
                 }
                 throw new RuntimeException(msg.toString(), e);
             }
-            permissionService.flush(obj);
+            permissionRepository.flush(obj);
             data.add(obj);
         }
     }

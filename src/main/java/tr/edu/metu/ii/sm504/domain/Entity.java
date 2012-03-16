@@ -1,9 +1,5 @@
 package tr.edu.metu.ii.sm504.domain;
 
-import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
-import org.springframework.roo.addon.tostring.RooToString;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

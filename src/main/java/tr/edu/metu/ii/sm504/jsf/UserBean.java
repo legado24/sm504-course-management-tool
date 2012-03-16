@@ -1,35 +1,20 @@
 package tr.edu.metu.ii.sm504.jsf;
 
-import org.primefaces.component.autocomplete.AutoComplete;
-import org.primefaces.component.calendar.Calendar;
-import org.primefaces.component.inputtext.InputText;
-import org.primefaces.component.message.Message;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.CloseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.roo.addon.jsf.managedbean.RooJsfManagedBean;
-import org.springframework.roo.addon.serializable.RooSerializable;
 import org.springframework.stereotype.Service;
 import tr.edu.metu.ii.sm504.domain.User;
-import tr.edu.metu.ii.sm504.domain.User;
-import tr.edu.metu.ii.sm504.jsf.converter.UserConverter;
 import tr.edu.metu.ii.sm504.service.UserService;
 
 import javax.annotation.PostConstruct;
-import javax.el.ELContext;
-import javax.el.ExpressionFactory;
-import javax.faces.application.Application;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.component.html.HtmlOutputText;
-import javax.faces.component.html.HtmlPanelGrid;
 import javax.faces.context.FacesContext;
-import javax.faces.convert.DateTimeConverter;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service

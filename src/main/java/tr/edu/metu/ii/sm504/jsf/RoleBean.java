@@ -2,7 +2,6 @@ package tr.edu.metu.ii.sm504.jsf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tr.edu.metu.ii.sm504.domain.Permission;
 import tr.edu.metu.ii.sm504.domain.Role;
 import tr.edu.metu.ii.sm504.service.RoleService;
 import tr.edu.metu.ii.sm504.util.ApplicationUtil;

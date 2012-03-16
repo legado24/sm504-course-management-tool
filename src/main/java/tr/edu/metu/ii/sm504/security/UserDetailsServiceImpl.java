@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import tr.edu.metu.ii.sm504.domain.User;
 import tr.edu.metu.ii.sm504.service.UserService;
 
-import java.util.HashMap;
-
 /**
  * Created by IntelliJ IDEA.
  * User: ekisa

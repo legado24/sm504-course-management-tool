@@ -7,7 +7,7 @@ import org.joda.time.DateTimeZone;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import java.util.*;
+import java.util.Date;
 
 /**
  * Created by IntelliJ IDEA.

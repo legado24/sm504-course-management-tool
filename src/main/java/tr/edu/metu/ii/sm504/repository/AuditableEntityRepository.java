@@ -1,10 +1,6 @@
-package tr.edu.metu.ii.sm504.service;
+package tr.edu.metu.ii.sm504.repository;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import tr.edu.metu.ii.sm504.domain.AuditableEntity;
-import tr.edu.metu.ii.sm504.domain.Entity;
 import tr.edu.metu.ii.sm504.domain.User;
 import tr.edu.metu.ii.sm504.util.ApplicationUtil;
 
@@ -17,7 +13,7 @@ import java.util.Date;
  * Time: 01:44
  * To change this template use File | Settings | File Templates.
  */
-public abstract class AuditableEntityService<T extends AuditableEntity> extends EntityService<AuditableEntity>{
+public abstract class AuditableEntityRepository<T extends AuditableEntity> extends EntityRepository<AuditableEntity> {
 
     public void persist(AuditableEntity auditableEntity) {
         try {

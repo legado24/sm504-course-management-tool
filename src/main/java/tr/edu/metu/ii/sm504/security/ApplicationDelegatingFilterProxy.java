@@ -1,14 +1,9 @@
 package tr.edu.metu.ii.sm504.security;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import tr.edu.metu.ii.sm504.util.SpringPropertiesUtil;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.context.FacesContext;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;

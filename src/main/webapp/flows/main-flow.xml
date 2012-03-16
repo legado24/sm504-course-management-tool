@@ -17,8 +17,6 @@
         <transition to="instructorHome"/>
     </action-state>
 
-    <view-state id="instructorHome" view="/pages/main.xhtml" redirect="false">
-    </view-state>
 
     <view-state id="assistantHome" view="/pages/main.xhtml" redirect="false">
     </view-state>
@@ -26,5 +24,6 @@
     <view-state id="studentHome" view="/pages/main.xhtml" redirect="false">
     </view-state>
 
-	<end-state id="finish" view="flowRedirect:login-flow"/>
+    <end-state id="instructorHome" view="flowRedirect:instructorHome-flow"/>
+    <end-state id="finish" view="flowRedirect:login-flow"/>
 </flow>
